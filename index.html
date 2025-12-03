@@ -2,34 +2,11 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>SEB.P PHOTOGRAPHY – Photographe sportif et portrait à Montlaur (Toulouse)</title>
+  <title>Seb.p Photographie - Sport & Portrait</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="description" content="Photographe sportif et portrait à Montlaur (31450), près de Toulouse. SEB.P PHOTOGRAPHY capture l’intensité du hockey, du football, de l’équitation et du sport mécanique, ainsi que des portraits studio et boudoir élégants." />
-  <meta name="keywords" content="SEB.P PHOTOGRAPHY, photographe sportif, photographe hockey, photographe football, photographe équitation, photographe sport mécanique, portrait, boudoir, Montlaur, 31450, Toulouse, séance photo" />
-  <meta name="author" content="SEB.P PHOTOGRAPHY" />
-
-  <!-- À adapter avec l’URL de ton site et une image en ligne -->
-  <meta property="og:title" content="SEB.P PHOTOGRAPHY – Photographe sportif et portrait à Montlaur (Toulouse)" />
-  <meta property="og:description" content="Photographe sportif et portrait à Montlaur (31450), près de Toulouse. Hockey, football, équitation, sport mécanique, portrait studio et boudoir." />
-  <meta property="og:url" content="https://ton-site.netlify.app/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://ton-site.netlify.app/images/hockey-1.jpg" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
   <style>
-    :root {
-      --bg: #020617;
-      --bg-soft: #0b1120;
-      --accent: #eab308;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --border: rgba(148, 163, 184, 0.3);
-    }
-
+    /* RESET SIMPLE */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -37,15 +14,10 @@
     }
 
     body {
-      font-family: "Poppins", system-ui, sans-serif;
-      background: radial-gradient(circle at top, #1f2937 0, #020617 40%, #000 100%);
-      color: var(--text);
-      -webkit-font-smoothing: antialiased;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #050505;
+      color: #f5f5f5;
+      line-height: 1.5;
     }
 
     a {
@@ -53,1164 +25,532 @@
       text-decoration: none;
     }
 
-    .page-wrapper {
-      min-height: 100vh;
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    /* LAYOUT GLOBAL */
+
+    header {
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: #050505;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo-text {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     main {
-      flex: 1;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1120px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 0 1.25rem;
+      padding: 1.5rem;
     }
 
     section {
-      padding: 3.5rem 0;
+      margin-bottom: 3rem;
     }
 
-    /* HEADER */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(15, 23, 42, 0.95);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 3.5rem;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-
-    .brand-logo {
-      width: 44px;
-      height: 44px;
-      border-radius: 999px;
-      overflow: hidden;
-      border: 2px solid var(--accent);
-      background: #020617;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2px;
-    }
-
-    .brand-logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .brand-text strong {
-      font-size: 1.05rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      line-height: 1;
-    }
-
-    .nav-links {
-      display: none;
-      gap: 1.2rem;
-      font-size: 0.85rem;
-    }
-
-    .nav-links a {
-      position: relative;
-      padding-bottom: 0.1rem;
-    }
-
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 2px;
-      background: linear-gradient(to right, var(--accent), #f97316);
-      transition: width 0.15s ease-out;
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.5rem 1.2rem;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      border: 1px solid transparent;
-      cursor: pointer;
-      background: radial-gradient(circle at top left, #facc15, #eab308 45%, #b45309 100%);
-      color: #0b1120;
-      font-weight: 600;
-      box-shadow: 0 10px 25px rgba(234, 179, 8, 0.4);
-      transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
-      white-space: nowrap;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 16px 35px rgba(234, 179, 8, 0.45);
-    }
-
-    /* visible partout, y compris mobile */
-    .nav-cta {
-      display: inline-flex;
-    }
-
-    .nav-toggle {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 32px;
-      height: 32px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(15, 23, 42, 0.9);
-      cursor: pointer;
-    }
-
-    .nav-toggle span {
-      width: 16px;
-      height: 2px;
-      border-radius: 999px;
-      background: #e5e7eb;
-      position: relative;
-    }
-
-    .nav-toggle span::before,
-    .nav-toggle span::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      width: 16px;
-      height: 2px;
-      border-radius: 999px;
-      background: #e5e7eb;
-    }
-
-    .nav-toggle span::before {
-      top: -5px;
-    }
-
-    .nav-toggle span::after {
-      top: 5px;
-    }
-
-    .nav-mobile {
-      display: none;
-      flex-direction: column;
-      padding: 0.5rem 0 0.75rem;
-      font-size: 0.85rem;
-    }
-
-    .nav-mobile a {
-      padding: 0.35rem 0;
-      border-bottom: 1px solid rgba(31, 41, 55, 0.9);
-    }
-
-    .nav-mobile a:last-child {
-      border-bottom: none;
-    }
-
-    /* TITRES DE SECTION */
-    .section-header {
-      margin-bottom: 1.8rem;
-      text-align: left;
-    }
-
-    .section-kicker {
-      font-size: 1.05rem;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--accent);
-      margin-bottom: 0.45rem;
-      font-weight: 800;
-      text-decoration: underline;
-      text-decoration-thickness: 2px;
-      text-underline-offset: 4px;
-    }
-
-    .section-title {
-      font-size: 1.6rem;
-      font-weight: 600;
-      letter-spacing: -0.04em;
-      margin-bottom: 0.2rem;
-    }
-
-    .section-subtitle {
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    .mini-text {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 0.5rem;
-    }
-
-    /* HERO */
-    #accueil {
-      padding-top: 3.8rem;
-      padding-bottom: 3.2rem;
-    }
+    /* HERO SIMPLE */
 
     .hero {
       display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
       gap: 2rem;
       align-items: center;
+      margin-bottom: 2.5rem;
     }
 
-    .hero-title {
-      font-size: 2.1rem;
-      line-height: 1.1;
-      letter-spacing: -0.05em;
-      margin-bottom: 0.4rem;
+    .hero h1 {
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      margin-bottom: 0.75rem;
     }
 
-    .hero-title span {
-      background: linear-gradient(to right, #facc15, #f97316, #fb7185);
-      -webkit-background-clip: text;
-      color: transparent;
+    .hero-highlight {
+      color: #f97316;
     }
 
-    .hero-text {
-      font-size: 0.9rem;
-      color: var(--muted);
+    .hero p {
+      max-width: 520px;
+      opacity: 0.9;
       margin-bottom: 1rem;
-      max-width: 30rem;
     }
 
-    .hero-tags {
+    .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.75rem;
-      font-size: 0.75rem;
-    }
-
-    .tag {
-      padding: 0.15rem 0.6rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      background: rgba(15, 23, 42, 0.85);
-      color: var(--muted);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      font-family: inherit;
-      transition: border-color 0.1s ease-out, color 0.1s ease-out, background 0.1s ease-out;
-    }
-
-    .tag:hover {
-      border-color: var(--accent);
-      color: var(--text);
-      background: rgba(15, 23, 42, 1);
-    }
-
-    .hero-visual {
-      background: radial-gradient(circle at top, #020617, #000 70%);
-      border-radius: 1.4rem;
-      padding: 0.7rem;
-      border: 1px solid var(--border);
-    }
-
-    .hero-photo {
-      border-radius: 1.1rem;
-      overflow: hidden;
-      background: #000;
-      aspect-ratio: 4 / 3;
-    }
-
-    .hero-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-      background: #000;
-    }
-
-    /* Bloc réseaux sociaux */
-    .hero-social {
-      margin-top: 1.1rem;
-      padding: 0.7rem 0.85rem;
-      border-radius: 0.9rem;
-      border: 1px solid rgba(234, 179, 8, 0.4);
-      background: radial-gradient(circle at top left, rgba(234, 179, 8, 0.14), rgba(15, 23, 42, 0.95));
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 0.8rem;
-    }
-
-    .hero-social-label {
-      font-weight: 600;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 0.7rem;
-    }
-
-    .hero-social-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .social-btn {
-      padding: 0.25rem 0.8rem;
-      border-radius: 999px;
-      border: 1px solid var(--accent);
-      background: rgba(15, 23, 42, 0.96);
-      font-size: 0.8rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.35rem;
-      box-shadow: 0 8px 18px rgba(234, 179, 8, 0.25);
-      cursor: pointer;
-      transition: transform 0.1s ease-out, box-shadow 0.1s ease-out, background 0.1s ease-out;
-    }
-
-    .social-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 12px 24px rgba(234, 179, 8, 0.35);
-      background: rgba(24, 35, 70, 0.98);
-    }
-
-    .social-icon {
-      width: 14px;
-      height: 14px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* CARTES DE COLLECTIONS */
-    .collections {
-      display: grid;
-      gap: 0.9rem;
-    }
-
-    .collections-3 {
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    }
-
-    .collection-card {
-      border-radius: 1rem;
-      overflow: hidden;
-      border: 1px solid rgba(31, 41, 55, 0.95);
-      background: #020617;
-      display: flex;
-      flex-direction: column;
-      cursor: pointer;
-      transition: transform 0.15s ease-out, box-shadow 0.15s ease-out, border-color 0.15s ease-out;
-    }
-
-    .collection-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.65);
-      border-color: rgba(234, 179, 8, 0.5);
-    }
-
-    .collection-thumb {
-      aspect-ratio: 3 / 2;
-      background: #000;
-    }
-
-    .collection-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      background: #000;
-    }
-
-    .collection-body {
-      padding: 0.6rem 0.75rem 0.75rem;
-      font-size: 0.82rem;
-    }
-
-    .collection-title {
-      font-weight: 600;
-      margin-bottom: 0.2rem;
-    }
-
-    .collection-meta {
-      font-size: 0.75rem;
-      color: var(--muted);
-    }
-
-    .collection-link {
-      margin-top: 0.45rem;
-      font-size: 0.78rem;
-      color: var(--accent);
-    }
-
-    /* A PROPOS */
-    .about-text {
-      font-size: 0.9rem;
-      color: var(--muted);
-      max-width: 32rem;
-    }
-
-    .about-text strong {
-      color: var(--text);
-    }
-
-    /* CONTACT */
-    #contact {
-      background: radial-gradient(circle at top left, rgba(234, 179, 8, 0.09), transparent 60%);
-      border-top: 1px solid var(--border);
-    }
-
-    .contact-layout {
-      display: grid;
-      gap: 1.5rem;
-    }
-
-    form {
-      display: grid;
       gap: 0.75rem;
     }
 
-    label {
-      font-size: 0.8rem;
-      color: var(--muted);
+    .btn-primary,
+    .btn-ghost {
+      border-radius: 999px;
+      padding: 0.55rem 1.2rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
     }
 
-    input,
-    textarea,
-    select {
+    .btn-primary {
+      background: #f97316;
+      color: #050505;
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.05);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border-color: rgba(148,163,184,0.7);
+      color: #e5e7eb;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15,23,42,0.9);
+    }
+
+    .hero-preview-frame {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(148,163,184,0.3);
+      background: #111;
+      max-width: 100%;
+    }
+
+    .hero-preview-frame img {
       width: 100%;
-      border-radius: 0.7rem;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      background: rgba(15, 23, 42, 0.95);
-      padding: 0.5rem 0.7rem;
-      font-size: 0.85rem;
-      color: var(--text);
-      font-family: inherit;
-      outline: none;
-      transition: border-color 0.1s ease-out, box-shadow 0.1s ease-out, background 0.1s ease-out;
-      resize: vertical;
+      height: auto;
+      display: block;
+      object-fit: cover;
     }
 
-    input:focus,
-    textarea:focus,
-    select:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 1px rgba(234, 179, 8, 0.3);
-      background: rgba(15, 23, 42, 1);
+    /* GALERIES : CATEGORIES EN BOUTONS */
+
+    #galeries h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
     }
 
-    textarea {
-      min-height: 110px;
+    #galeries p {
+      opacity: 0.9;
+      margin-bottom: 1rem;
     }
 
-    .contact-info {
-      font-size: 0.85rem;
-      color: var(--muted);
-      display: flex;
-      flex-direction: column;
-      gap: 0.7rem;
-    }
-
-    .highlight {
-      border-radius: 0.9rem;
-      border: 1px solid var(--border);
-      padding: 0.7rem 0.8rem;
-      background: rgba(15, 23, 42, 0.96);
-      font-size: 0.8rem;
-    }
-
-    .chips {
+    .categories-buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.4rem;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
     }
 
-    .chip {
-      padding: 0.18rem 0.6rem;
+    .category-button {
       border-radius: 999px;
-      border: 1px dashed var(--accent);
-      background: rgba(15, 23, 42, 0.95);
-      font-size: 0.75rem;
+      padding: 0.45rem 1rem;
+      border: 1px solid rgba(148,163,184,0.7);
+      background: rgba(15,23,42,0.9);
+      color: #f5f5f5;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .category-button:hover {
+      border-color: #f97316;
+    }
+
+    .hint-text {
+      font-size: 0.9rem;
+      opacity: 0.85;
+      margin-bottom: 0.5rem;
+    }
+
+    /* (optionnel) un mini texte qui rappelle qu’il faut cliquer */
+    .hint-text-strong {
+      color: #f97316;
+      font-weight: 600;
+    }
+
+    /* CONTACT SIMPLE */
+
+    #contact h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    #contact p {
+      opacity: 0.9;
+      margin-bottom: 0.5rem;
+    }
+
+    #contact .infos {
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
     }
 
     /* FOOTER */
+
     footer {
-      border-top: 1px solid rgba(15, 23, 42, 0.9);
-      padding: 1rem 0 1.2rem;
-      font-size: 0.75rem;
-      color: var(--muted);
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem 2rem;
+      font-size: 0.8rem;
+      opacity: 0.6;
+      text-align: center;
     }
 
-    .footer-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.7rem;
-      justify-content: space-between;
-      align-items: center;
-    }
+    /* LIGHTBOX AVEC FLOUES + CROIX */
 
-    /* LIGHTBOX */
-    .lightbox {
+    .lightbox-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.9);
-      display: flex;
+      background: rgba(0,0,0,0.9);
+      display: none; /* devient flex quand ouverte */
       align-items: center;
       justify-content: center;
-      z-index: 9999;
-      visibility: hidden;
-      opacity: 0;
-      transition: opacity 0.25s ease-in-out;
+      z-index: 50;
     }
 
-    .lightbox.visible {
-      visibility: visible;
-      opacity: 1;
+    .lightbox-backdrop.visible {
+      display: flex;
     }
 
     .lightbox-inner {
+      max-width: 1000px;
+      width: 100%;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .lightbox-main {
       position: relative;
-      max-width: 90vw;
-      max-height: 90vh;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #000;
+      max-height: 80vh;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    .lightbox-inner img {
+    .lightbox-main img {
       max-width: 100%;
-      max-height: 100%;
+      max-height: 80vh;
       object-fit: contain;
-      border-radius: 1rem;
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
-      opacity: 0;
-      transform: scale(0.98);
-      transition: opacity 0.4s ease, transform 0.4s ease;
-      background: #000;
     }
 
-    .lightbox-inner img.visible {
-      opacity: 1;
-      transform: scale(1);
+    /* CROIX DE FERMETURE TRÈS VISIBLE */
+    .lightbox-close {
+      position: absolute;
+      top: 0.7rem;
+      right: 0.7rem;
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      border-radius: 999px;
+      border: 2px solid #fff;
+      padding: 0.25rem 0.75rem 0.3rem;
+      font-size: 1.4rem;
+      cursor: pointer;
+      line-height: 1;
     }
+
+    .lightbox-close:hover {
+      border-color: #f97316;
+      color: #f97316;
+    }
+
+    /* FLÈCHES GAUCHE / DROITE SUR L'IMAGE */
 
     .lightbox-arrow {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 38px;
-      height: 38px;
+      background: rgba(0,0,0,0.8);
+      color: #fff;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.8);
-      background: rgba(15, 23, 42, 0.8);
-      color: #e5e7eb;
-      display: inline-flex;
+      border: 2px solid #fff;
+      width: 2.4rem;
+      height: 2.4rem;
+      display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.4rem;
       cursor: pointer;
-      transition: background 0.15s ease-out, transform 0.1s ease-out;
+      font-size: 1.5rem;
+      user-select: none;
+    }
+
+    .lightbox-arrow-left {
+      left: 0.7rem;
+    }
+
+    .lightbox-arrow-right {
+      right: 0.7rem;
     }
 
     .lightbox-arrow:hover {
-      background: rgba(30, 64, 175, 0.9);
-      transform: translateY(-50%) scale(1.03);
+      border-color: #f97316;
+      color: #f97316;
     }
 
-    .lightbox-prev { left: 0.75rem; }
-    .lightbox-next { right: 0.75rem; }
-
-    .lightbox-close {
-      position: absolute;
-      top: 0.75rem;
-      right: 0.75rem;
-      width: 32px;
-      height: 32px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.8);
-      background: rgba(15, 23, 42, 0.8);
-      color: #e5e7eb;
-      font-size: 1.1rem;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+    .lightbox-caption {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      text-align: center;
+      margin-top: 0.3rem;
     }
 
-    @media (max-width: 640px) {
-      .lightbox-prev { left: 0.4rem; }
-      .lightbox-next { right: 0.4rem; }
-      .lightbox-close { top: 0.5rem; right: 0.5rem; }
-    }
-
-    @media (min-width: 900px) {
-      .lightbox-inner {
-        max-width: 80vw;
-        max-height: 80vh;
-      }
-    }
-
-    @media (min-width: 768px) {
-      #accueil {
-        padding-top: 4.2rem;
-        padding-bottom: 3.6rem;
-      }
-
+    @media (max-width: 800px) {
       .hero {
-        grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.45fr);
-      }
-
-      .nav-links { display: flex; }
-      .nav-toggle,
-      .nav-mobile { display: none; }
-
-      .contact-layout {
-        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-        align-items: flex-start;
+        grid-template-columns: minmax(0,1fr);
       }
     }
 
-    @media (min-width: 1024px) {
-      .hero-title { font-size: 2.5rem; }
-
-      .collections-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+    @media (max-width: 600px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
   </style>
 </head>
 <body>
-<div class="page-wrapper">
   <header>
-    <div class="container nav">
-      <div class="brand">
-        <div class="brand-logo">
-          <img src="images/logo-photo.png" alt="Logo SEB.P PHOTOGRAPHY" />
-        </div>
-        <div class="brand-text">
-          <strong>SEB.P PHOTOGRAPHY</strong>
-        </div>
-      </div>
-
-      <nav class="nav-links">
-        <a href="#accueil">Accueil</a>
-        <a href="#galerie-sport">Sport</a>
-        <a href="#galerie-portraits">Portrait & Boudoir</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <button class="btn nav-cta" onclick="scrollToId('contact')">
-        Réserver une séance
-      </button>
-
-      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">
-        <span></span>
-      </button>
-    </div>
-
-    <div class="container nav-mobile" id="navMobile">
-      <a href="#accueil">Accueil</a>
-      <a href="#galerie-sport">Sport</a>
-      <a href="#galerie-portraits">Portrait & Boudoir</a>
-      <a href="#contact">Contact</a>
+    <div class="header-inner">
+      <!-- Ici tu peux remplacer par ton logo image si tu veux -->
+      <div class="logo-text">Seb.p Photographie</div>
     </div>
   </header>
 
   <main>
     <!-- HERO -->
-    <section id="accueil">
-      <div class="container hero">
-        <div>
-          <h1 class="hero-title">
-            L’intensité du <span>sport</span>, la force du <span>portrait</span>.
-          </h1>
-          <p class="hero-text">
-            Installé à Montlaur, près de Toulouse, je mets mon objectif au service du mouvement, de l’émotion et du regard.
-            Que ce soit sur la glace, sur un terrain, sur un circuit ou en studio, chaque image raconte une histoire.
-          </p>
-          <button class="btn" onclick="scrollToId('galerie-sport')">
-            Voir les images
-          </button>
-
-          <!-- Réseaux sociaux -->
-          <div class="hero-social">
-            <span class="hero-social-label">Me suivre :</span>
-            <div class="hero-social-links">
-              <a class="social-btn" href="https://www.instagram.com/seb.p.photo" target="_blank" rel="noopener">
-                <span class="social-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="14" height="14">
-                    <rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="#eab308" stroke-width="1.6"/>
-                    <circle cx="12" cy="12" r="4.2" fill="none" stroke="#eab308" stroke-width="1.6"/>
-                    <circle cx="17" cy="7" r="1.3" fill="#eab308"/>
-                  </svg>
-                </span>
-                Instagram
-              </a>
-              <a class="social-btn" href="https://www.facebook.com/seb.p.photo" target="_blank" rel="noopener">
-                <span class="social-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="14" height="14">
-                    <path d="M14.5 4H16.5V7H14.5C13.7 7 13 7.7 13 8.5V10H16.5V13H13V20H10V13H7.5V10H10V8.5C10 6.6 11.6 5 13.5 5H14.5Z" fill="#eab308"/>
-                  </svg>
-                </span>
-                Facebook
-              </a>
-            </div>
-          </div>
-
-          <!-- Boutons de raccourci : ouvrent la série correspondante -->
-          <div class="hero-tags">
-            <button class="tag" type="button" onclick="openLightbox('hockey', 0)">Hockey sur glace</button>
-            <button class="tag" type="button" onclick="openLightbox('foot', 0)">Football</button>
-            <button class="tag" type="button" onclick="openLightbox('equitation', 0)">Équitation</button>
-            <button class="tag" type="button" onclick="openLightbox('sportmeca', 0)">Sport mécanique</button>
-            <button class="tag" type="button" onclick="openLightbox('portrait-studio', 0)">Portrait studio</button>
-            <button class="tag" type="button" onclick="openLightbox('boudoir', 0)">Boudoir</button>
-          </div>
-        </div>
-
-        <div class="hero-visual">
-          <div class="hero-photo">
-            <img src="images/hockey-1.jpg" alt="Photo de hockey sur glace" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SPORT -->
-    <section id="galerie-sport">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Sport</div>
-          <h2 class="section-title">Hockey, football, équitation & sport mécanique</h2>
-          <p class="section-subtitle">
-            Clique sur une catégorie pour faire défiler toutes les photos de la série.
-          </p>
-        </div>
-
-        <div class="collections collections-3">
-          <div class="collection-card" onclick="openLightbox('hockey', 0)">
-            <div class="collection-thumb">
-              <img src="images/hockey-1.jpg" alt="Galerie hockey sur glace" />
-            </div>
-            <div class="collection-body">
-              <div class="collection-title">Hockey sur glace</div>
-              <div class="collection-meta">Série d’images en situation de match.</div>
-              <div class="collection-link">Voir la galerie hockey →</div>
-            </div>
-          </div>
-
-          <div class="collection-card" onclick="openLightbox('foot', 0)">
-            <div class="collection-thumb">
-              <img src="images/foot-1.jpg" alt="Galerie football" />
-            </div>
-            <div class="collection-body">
-              <div class="collection-title">Football</div>
-              <div class="collection-meta">Actions, duels et émotions sur le terrain.</div>
-              <div class="collection-link">Voir la galerie football →</div>
-            </div>
-          </div>
-
-          <div class="collection-card" onclick="openLightbox('equitation', 0)">
-            <div class="collection-thumb">
-              <img src="images/equitation-1.jpg" alt="Galerie équitation" />
-            </div>
-            <div class="collection-body">
-              <div class="collection-title">Équitation</div>
-              <div class="collection-meta">CSO, sauts & portraits cavaliers / chevaux.</div>
-              <div class="collection-link">Voir la galerie équitation →</div>
-            </div>
-          </div>
-
-          <div class="collection-card" onclick="openLightbox('sportmeca', 0)">
-            <div class="collection-thumb">
-              <img src="images/sportmeca-1.jpg" alt="Galerie sport mécanique" />
-            </div>
-            <div class="collection-body">
-              <div class="collection-title">Sport mécanique</div>
-              <div class="collection-meta">Circuit, karting, drift, rallye…</div>
-              <div class="collection-link">Voir la galerie sport mécanique →</div>
-            </div>
-          </div>
-        </div>
-
-        <p class="mini-text">
-          Matchs, tournois, concours, circuits : possibilité de couvrir un évènement complet ou de créer des portraits
-          de joueurs, pilotes, cavaliers et équipes.
+    <section class="hero">
+      <div>
+        <h1>Photographie <span class="hero-highlight">sport & studio</span></h1>
+        <p>
+          Hockey sur glace, football, équitation, portraits studio...  
+          Je capture l’intensité, les émotions et les détails de vos plus beaux moments.
         </p>
-      </div>
-    </section>
-
-    <!-- PORTRAITS / BOUDOIR -->
-    <section id="galerie-portraits">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Portrait & boudoir</div>
-          <h2 class="section-title">Mettre en valeur ta personnalité</h2>
-          <p class="section-subtitle">
-            Portraits simples, naturels ou plus stylisés, et séances boudoir élégantes.
-          </p>
-          <p class="mini-text">
-            Séances sur rendez-vous, dans une ambiance détendue et bienveillante. Guidage des poses,
-            lumière travaillée, retouche naturelle.
-          </p>
+        <div class="hero-actions">
+          <a href="#galeries" class="btn-primary">Voir les images</a>
+          <a href="#contact" class="btn-ghost">Me contacter</a>
         </div>
+      </div>
 
-        <div class="collections collections-3">
-          <div class="collection-card" onclick="openLightbox('portrait-studio', 0)">
-            <div class="collection-thumb">
-              <img src="images/portrait-studio-1.jpg" alt="Galerie portrait studio" />
-            </div>
-            <div class="collection-body">
-              <div class="collection-title">Portrait studio</div>
-              <div class="collection-meta">Lumière maîtrisée, fond travaillé, ambiance posée.</div>
-              <div class="collection-link">Voir la galerie portrait studio →</div>
-            </div>
-          </div>
-
-          <div class="collection-card" onclick="openLightbox('portrait-exterieur', 0)">
-            <div class="collection-thumb">
-              <img src="images/portrait-exterieur-1.jpg" alt="Galerie portrait extérieur" />
-            </div>
-            <div class="collection-body">
-              <div class="collection-title">Portrait en extérieur</div>
-              <div class="collection-meta">Lumière naturelle, lieux choisis ensemble.</div>
-              <div class="collection-link">Voir la galerie portrait extérieur →</div>
-            </div>
-          </div>
-
-          <div class="collection-card" onclick="openLightbox('boudoir', 0)">
-            <div class="collection-thumb">
-              <img src="images/boudoir-1.jpg" alt="Galerie boudoir" />
-            </div>
-            <div class="collection-body">
-              <div class="collection-title">Boudoir</div>
-              <div class="collection-meta">Séances élégantes, intimes et respectueuses.</div>
-              <div class="collection-link">Voir la galerie boudoir →</div>
-            </div>
-          </div>
+      <div class="hero-preview">
+        <div class="hero-preview-frame">
+          <!-- Mets ici une image qui représente ton univers -->
+          <img src="images/hockey-1.jpg" alt="Aperçu Seb.p Photographie">
         </div>
       </div>
     </section>
 
-    <!-- A PROPOS -->
-    <section id="a-propos">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">À propos</div>
-          <h2 class="section-title">SEB.P PHOTOGRAPHY – photographe</h2>
-        </div>
-        <p class="about-text">
-          <strong>Sportif dans l’âme et passionné d’image</strong>, je photographie aussi bien l’intensité des matchs
-          que des portraits plus posés. Basé à <strong>Montlaur (31450), près de Toulouse</strong>, je me déplace
-          pour couvrir vos évènements sportifs et réaliser des séances portraits ou boudoir, dans une ambiance
-          simple et détendue.
-        </p>
+    <!-- GALERIES -->
+    <section id="galeries">
+      <h2>Galeries par univers</h2>
+      <p>
+        Choisissez une catégorie ci-dessous pour ouvrir la galerie associée.
+      </p>
+      <p class="hint-text">
+        <span class="hint-text-strong">Astuce :</span> cliquez sur la catégorie, puis utilisez les flèches (ou le clavier) pour naviguer entre les photos.
+      </p>
+
+      <div class="categories-buttons">
+        <button class="category-button" data-category="hockey">Hockey sur glace</button>
+        <button class="category-button" data-category="foot">Football</button>
+        <button class="category-button" data-category="equitation">Équitation</button>
+        <button class="category-button" data-category="portrait">Portrait studio</button>
+        <button class="category-button" data-category="boudoir">Boudoir</button>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Contact</div>
-          <h2 class="section-title">Parlons de ton projet</h2>
-          <p class="section-subtitle">
-            Dis-moi ce que tu veux faire, je te répondrai avec les dispos et une idée de tarif.
-          </p>
-        </div>
-
-        <div class="contact-layout">
-          <div>
-            <form
-              method="POST"
-              action="https://formspree.io/f/xdkprrlo"
-            >
-              <div>
-                <label for="name">Nom & prénom</label>
-                <input id="name" name="name" type="text" placeholder="Ton nom" required />
-              </div>
-
-              <div>
-                <label for="email">Adresse e-mail</label>
-                <input id="email" name="email" type="email" placeholder="ton-email@exemple.com" required />
-              </div>
-
-              <div>
-                <label for="type">Type de séance</label>
-                <select id="type" name="type" required>
-                  <option value="">Sélectionne une option</option>
-                  <option value="sport">Sport (hockey, foot, équitation, sport mécanique)</option>
-                  <option value="portrait">Portrait</option>
-                  <option value="boudoir">Boudoir</option>
-                  <option value="autre">Autre / à préciser</option>
-                </select>
-              </div>
-
-              <div>
-                <label for="message">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Donne quelques infos : lieu, date(s), type de séance..."
-                  required
-                ></textarea>
-              </div>
-
-              <input type="hidden" name="_subject" value="Nouveau message depuis le site SEB.P PHOTOGRAPHY" />
-
-              <button class="btn" type="submit">Envoyer ma demande</button>
-            </form>
-          </div>
-
-          <div class="contact-info">
-            <div class="highlight">
-              Basé à Montlaur (31450), près de Toulouse. Disponible pour : matchs, tournois, concours,
-              circuits, séances portraits et boudoir sur rendez-vous.
-            </div>
-
-            <div>
-              <strong>Réseaux sociaux</strong>
-              <div class="chips">
-                <a class="chip" href="https://www.instagram.com/seb.p.photo" target="_blank" rel="noopener">
-                  Instagram
-                </a>
-                <a class="chip" href="https://www.facebook.com/seb.p.photo" target="_blank" rel="noopener">
-                  Facebook
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <strong>E-mail direct</strong><br />
-              <a href="mailto:seb.p.photo@gmail.com">seb.p.photo@gmail.com</a>
-            </div>
-          </div>
-        </div>
+      <h2>Contact</h2>
+      <p>
+        Pour une séance photo (sport, studio, projet personnalisé), n'hésitez pas à me contacter.
+      </p>
+      <div class="infos">
+        <p>Téléphone : <strong>06 34 23 55 57</strong></p>
+        <p>E-mail : <strong>seb.p.photo@example.com</strong></p>
+        <p>Basé près de Toulouse / Lauragais.</p>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-row">
-      <span>© <span id="year"></span> SEB.P PHOTOGRAPHY.</span>
-      <span>Photographe sportif & portrait – Montlaur (31450).</span>
-    </div>
+    © <span id="year"></span> Seb.p Photographie – Tous droits réservés.
   </footer>
-</div>
 
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
-  <div class="lightbox-inner">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">×</button>
-    <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" aria-label="Photo précédente">‹</button>
-    <img src="" alt="Aperçu de la photo" id="lightboxImg" />
-    <button class="lightbox-arrow lightbox-next" id="lightboxNext" aria-label="Photo suivante">›</button>
+  <!-- LIGHTBOX AVEC FLOUS + CROIX -->
+  <div class="lightbox-backdrop" id="lightbox">
+    <div class="lightbox-inner">
+      <div class="lightbox-main">
+        <button class="lightbox-close" id="lightboxClose">✕</button>
+        <button class="lightbox-arrow lightbox-arrow-left" id="arrowLeft">‹</button>
+        <img id="lightboxImage" src="" alt="Photo de la galerie">
+        <button class="lightbox-arrow lightbox-arrow-right" id="arrowRight">›</button>
+      </div>
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
   </div>
-</div>
 
-<script>
-  // Année footer
-  document.getElementById("year").textContent = new Date().getFullYear();
+  <script>
+    // Année dans le footer
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Scroll doux
-  function scrollToId(id) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-
-  // Menu mobile
-  const navToggle = document.getElementById("navToggle");
-  const navMobile = document.getElementById("navMobile");
-
-  if (navToggle && navMobile) {
-    navToggle.addEventListener("click", () => {
-      const isOpen = navMobile.style.display === "flex";
-      navMobile.style.display = isOpen ? "none" : "flex";
-    });
-
-    navMobile.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navMobile.style.display = "none";
-      });
-    });
-  }
-
-  // ----- GESTION DES GALERIES -----
-  const galleries = {};
-  let currentGalleryKey = null;
-  let currentIndex = 0;
-
-  function registerSrc(galleryKey, src) {
-    if (!galleries[galleryKey]) {
-      galleries[galleryKey] = [];
-    }
-    galleries[galleryKey].push(src);
-  }
-
-  // On crée les séries automatiquement à partir des noms de fichiers (1 à 30)
-  const galleryConfigs = [
-    { key: "hockey",            prefix: "hockey-",            max: 30 },
-    { key: "foot",              prefix: "foot-",              max: 30 },
-    { key: "equitation",        prefix: "equitation-",        max: 30 },
-    { key: "sportmeca",         prefix: "sportmeca-",         max: 30 },
-    { key: "portrait-studio",   prefix: "portrait-studio-",   max: 30 },
-    { key: "portrait-exterieur",prefix: "portrait-exterieur-",max: 30 },
-    { key: "boudoir",           prefix: "boudoir-",           max: 30 }
-  ];
-
-  galleryConfigs.forEach(cfg => {
-    for (let i = 1; i <= cfg.max; i++) {
-      const img = new Image();
-      const src = "images/" + cfg.prefix + i + ".jpg";
-      img.onload = () => registerSrc(cfg.key, src);
-      img.onerror = () => { /* fichier manquant = ignoré */ };
-      img.src = src;
-    }
-  });
-
-  // LIGHTBOX
-  const lightbox      = document.getElementById("lightbox");
-  const lightboxImg   = document.getElementById("lightboxImg");
-  const lightboxPrev  = document.getElementById("lightboxPrev");
-  const lightboxNext  = document.getElementById("lightboxNext");
-  const lightboxClose = document.getElementById("lightboxClose");
-
-  function updateLightboxImage() {
-    if (!currentGalleryKey) return;
-    const list = galleries[currentGalleryKey];
-    if (!list || !list.length) return;
-
-    const length = list.length;
-    currentIndex = ((currentIndex % length) + length) % length;
-    const src = list[currentIndex];
-
-    lightboxImg.classList.remove("visible");
-    lightboxImg.onload = function () {
-      if (!lightbox.classList.contains("visible")) return;
-      requestAnimationFrame(() => {
-        lightboxImg.classList.add("visible");
-      });
+    // CONFIG DES GALERIES
+    // On suppose des fichiers nommés :
+    // images/hockey-1.jpg .. hockey-20.jpg, idem pour foot, equitation, portrait, boudoir
+    const galleryConfig = {
+      hockey:  { label: "Hockey sur glace", prefix: "hockey" },
+      foot:    { label: "Football",         prefix: "foot" },
+      equitation: { label: "Équitation",    prefix: "equitation" },
+      portrait:   { label: "Portrait studio", prefix: "portrait" },
+      boudoir:    { label: "Boudoir",       prefix: "boudoir" }
     };
-    lightboxImg.src = src;
-  }
 
-  function openLightbox(galleryKey, startIndex) {
-    const list = galleries[galleryKey];
-    if (!list || !list.length) return;
-    currentGalleryKey = galleryKey;
-    currentIndex = startIndex || 0;
-    lightbox.classList.add("visible");
-    document.body.style.overflow = "hidden";
-    updateLightboxImage();
-  }
+    let currentCategory = null;
+    let currentImages = [];
+    let currentIndex = 0;
 
-  function closeLightbox() {
-    lightboxImg.classList.remove("visible");
-    lightbox.classList.remove("visible");
-    document.body.style.overflow = "";
-    setTimeout(() => {
-      lightboxImg.src = "";
-      currentGalleryKey = null;
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImage');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const btnClose = document.getElementById('lightboxClose');
+    const arrowLeft = document.getElementById('arrowLeft');
+    const arrowRight = document.getElementById('arrowRight');
+
+    // Quand on clique sur une catégorie
+    document.querySelectorAll('.category-button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const category = btn.dataset.category;
+        openCategory(category);
+      });
+    });
+
+    function openCategory(category) {
+      const conf = galleryConfig[category];
+      if (!conf) return;
+
+      currentCategory = category;
+      currentImages = [];
       currentIndex = 0;
-    }, 400);
-  }
 
-  function showNext() {
-    if (!currentGalleryKey) return;
-    currentIndex += 1;
-    updateLightboxImage();
-  }
+      const maxImages = 20;
+      const prefix = conf.prefix;
 
-  function showPrev() {
-    if (!currentGalleryKey) return;
-    currentIndex -= 1;
-    updateLightboxImage();
-  }
+      // On cherche les fichiers de 1 à 20, différentes extensions
+      for (let i = 1; i <= maxImages; i++) {
+        const base = "images/" + prefix + "-" + i;
+        const exts = ["jpg", "JPG", "jpeg", "JPEG"];
 
-  lightboxNext.addEventListener("click", (e) => {
-    e.stopPropagation();
-    showNext();
-  });
+        exts.forEach(ext => {
+          const url = base + "." + ext;
+          const img = new Image();
+          img.onload = function () {
+            if (!currentImages.includes(url)) {
+              currentImages.push(url);
+              // Dès qu'on a une première image, on affiche la lightbox
+              if (currentImages.length === 1) {
+                showLightbox(0);
+              }
+            }
+          };
+          img.onerror = function () {};
+          img.src = url;
+        });
+      }
 
-  lightboxPrev.addEventListener("click", (e) => {
-    e.stopPropagation();
-    showPrev();
-  });
-
-  lightboxClose.addEventListener("click", (e) => {
-    e.stopPropagation();
-    closeLightbox();
-  });
-
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) {
-      closeLightbox();
+      // Si aucune image n'est trouvée (ou presque), on affiche un message
+      setTimeout(() => {
+        if (currentImages.length === 0) {
+          alert("Aucune image trouvée pour cette galerie pour le moment.");
+        }
+      }, 800);
     }
-  });
 
-  document.addEventListener("keydown", (e) => {
-    if (!lightbox.classList.contains("visible")) return;
-    if (e.key === "ArrowRight") {
-      showNext();
-    } else if (e.key === "ArrowLeft") {
-      showPrev();
-    } else if (e.key === "Escape") {
-      closeLightbox();
+    function showLightbox(index) {
+      if (!currentImages.length) return;
+
+      if (index < 0) {
+        currentIndex = currentImages.length - 1;
+      } else if (index >= currentImages.length) {
+        currentIndex = 0;
+      } else {
+        currentIndex = index;
+      }
+
+      lightboxImg.src = currentImages[currentIndex];
+
+      const conf = galleryConfig[currentCategory] || { label: "" };
+      lightboxCaption.textContent =
+        (conf.label || "") + " – photo " +
+        (currentIndex + 1) + " / " + currentImages.length;
+
+      lightbox.classList.add('visible');
     }
-  });
 
-  // Swipe mobile
-  let touchStartX = 0;
-
-  lightbox.addEventListener("touchstart", (e) => {
-    if (!lightbox.classList.contains("visible")) return;
-    if (e.touches && e.touches.length === 1) {
-      touchStartX = e.touches[0].clientX;
+    function showPrev() {
+      showLightbox(currentIndex - 1);
     }
-  });
 
-  lightbox.addEventListener("touchend", (e) => {
-    if (!lightbox.classList.contains("visible")) return;
-    if (!e.changedTouches || e.changedTouches.length !== 1) return;
-    const dx = e.changedTouches[0].clientX - touchStartX;
-    const threshold = 40;
-    if (dx > threshold) {
-      showPrev();
-    } else if (dx < -threshold) {
-      showNext();
+    function showNext() {
+      showLightbox(currentIndex + 1);
     }
-  });
-</script>
+
+    arrowLeft.addEventListener('click', showPrev);
+    arrowRight.addEventListener('click', showNext);
+
+    // Fermer la lightbox (croix)
+    btnClose.addEventListener('click', () => {
+      lightbox.classList.remove('visible');
+    });
+
+    // Fermer en cliquant en dehors de l'image
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('visible');
+      }
+    });
+
+    // Navigation au clavier
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('visible')) return;
+
+      if (e.key === 'Escape') {
+        lightbox.classList.remove('visible');
+      } else if (e.key === 'ArrowLeft') {
+        showPrev();
+      } else if (e.key === 'ArrowRight') {
+        showNext();
+      }
+    });
+  </script>
 </body>
 </html>
