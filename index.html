@@ -2,19 +2,19 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>SEB.P PHOTOGRAPHY – Photographe sportif et portrait à Montlaur (Toulouse)</title>
+  <title>SEB.P PHOTOGRAPHY – Photographe sportif & portrait à Toulouse / Montlaur</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="description" content="Photographe sportif et portrait à Montlaur (31450), près de Toulouse. SEB.P PHOTOGRAPHY capture l’intensité du hockey, du football, de l’équitation et du sport mécanique, ainsi que des portraits studio et boudoir élégants." />
-  <meta name="keywords" content="SEB.P PHOTOGRAPHY, photographe sportif, photographe hockey, photographe football, photographe équitation, photographe sport mécanique, portrait, boudoir, Montlaur, 31450, Toulouse, séance photo" />
+  <meta name="description" content="Photographe sportif et portrait basé à Montlaur (31450), près de Toulouse. Hockey, football, équitation, sport mécanique, portrait studio, boudoir. Reportages sportifs, shootings individuels, séances en studio ou en extérieur sur mesure." />
+  <meta name="keywords" content="photographe sportif toulouse, photographe hockey toulouse, photographe équitation toulouse, photographe foot toulouse, photographe montlaur, photographe 31450, portrait studio toulouse, photographe boudoir toulouse, seb.p photography" />
   <meta name="author" content="SEB.P PHOTOGRAPHY" />
 
-  <!-- À adapter avec l’URL de ton site et une image en ligne -->
-  <meta property="og:title" content="SEB.P PHOTOGRAPHY – Photographe sportif et portrait à Montlaur (Toulouse)" />
-  <meta property="og:description" content="Photographe sportif et portrait à Montlaur (31450), près de Toulouse. Hockey, football, équitation, sport mécanique, portrait studio et boudoir." />
-  <meta property="og:url" content="https://ton-site.netlify.app/" />
+  <!-- Open Graph pour les partages -->
+  <meta property="og:title" content="SEB.P PHOTOGRAPHY – Photographe sportif & portrait à Toulouse" />
+  <meta property="og:description" content="Hockey, foot, équitation, sport mécanique, portrait studio et boudoir. Des images dynamiques et authentiques réalisées à Montlaur, près de Toulouse." />
+  <meta property="og:url" content="https://sebpphoto.fr/" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://ton-site.netlify.app/images/hockey-1.jpg" />
+  <meta property="og:image" content="https://sebpphoto.fr/images/hockey-1.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -617,8 +617,6 @@
       transform: scale(0.98);
       transition: opacity 0.4s ease, transform 0.4s ease;
       background: #000;
-      position: relative;
-      z-index: 1;
     }
 
     .lightbox-inner img.visible {
@@ -630,24 +628,26 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 38px;
-      height: 38px;
+      width: 42px;
+      height: 42px;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.8);
-      background: rgba(15, 23, 42, 0.8);
-      color: #e5e7eb;
+      border: 1px solid var(--accent);
+      background: rgba(15, 23, 42, 0.95);
+      color: var(--accent);
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       cursor: pointer;
-      transition: background 0.15s ease-out, transform 0.1s ease-out;
-      z-index: 2;
+      transition: background 0.15s ease-out, transform 0.1s ease-out, color 0.1s ease-out, box-shadow 0.15s ease-out;
+      z-index: 1;
     }
 
     .lightbox-arrow:hover {
-      background: rgba(30, 64, 175, 0.9);
-      transform: translateY(-50%) scale(1.03);
+      background: var(--accent);
+      color: #020617;
+      box-shadow: 0 0 18px rgba(234, 179, 8, 0.7);
+      transform: translateY(-50%) scale(1.06);
     }
 
     .lightbox-prev { left: 0.75rem; }
@@ -657,18 +657,25 @@
       position: absolute;
       top: 0.75rem;
       right: 0.75rem;
-      width: 32px;
-      height: 32px;
+      width: 34px;
+      height: 34px;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.8);
-      background: rgba(15, 23, 42, 0.8);
-      color: #e5e7eb;
-      font-size: 1.1rem;
+      border: 1px solid var(--accent);
+      background: rgba(15, 23, 42, 0.95);
+      color: var(--accent);
+      font-size: 1.3rem;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      z-index: 2;
+      transition: background 0.15s ease-out, color 0.15s ease-out, box-shadow 0.15s ease-out;
+      z-index: 1;
+    }
+
+    .lightbox-close:hover {
+      background: var(--accent);
+      color: #020617;
+      box-shadow: 0 0 18px rgba(234, 179, 8, 0.7);
     }
 
     @media (max-width: 640px) {
