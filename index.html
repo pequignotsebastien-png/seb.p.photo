@@ -358,12 +358,13 @@
       margin-bottom: 0.45rem;
     }
 
+    /* >>> MODIFIÉ : texte plus gros + gras pour "Voir la galerie" */
     .category-cta {
       display: inline-flex;
       align-items: center;
       gap: 0.35rem;
-      font-size: 0.85rem;
-      font-weight: 500;
+      font-size: 0.95rem;     /* avant : 0.85rem */
+      font-weight: 700;       /* avant : 500 */
       padding: 0.35rem 0.9rem;
       border-radius: 999px;
       background: rgba(15,23,42,0.92);
@@ -451,4 +452,513 @@
       font-size: 0.92rem;
     }
 
-    .co
+    .contact-card h3 {
+      margin-bottom: 0.4rem;
+      font-size: 1.05rem;
+    }
+
+    .contact-card p {
+      opacity: 0.9;
+      margin-bottom: 0.7rem;
+    }
+
+    .contact-card-cta {
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-top: 0.25rem;
+    }
+
+    footer {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 2rem;
+      font-size: 0.8rem;
+      opacity: 0.6;
+      text-align: center;
+    }
+
+    /* ---------- LIGHTBOX ---------- */
+
+    .lightbox-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+    }
+
+    .lightbox-backdrop.visible {
+      display: flex;
+    }
+
+    .lightbox-inner {
+      max-width: 1000px;
+      width: 100%;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .lightbox-main {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #020617;
+      max-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-main img {
+      max-width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+    }
+
+    /* >>> MODIFIÉ : croix de fermeture + flèches gauche/droite visibles */
+
+    .lightbox-close {
+      position: absolute;
+      top: 0.6rem;
+      right: 0.6rem;
+      background: rgba(15,23,42,0.92);
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.7);
+      padding: 0.15rem 0.55rem 0.25rem;
+      font-size: 1.1rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .lightbox-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(15,23,42,0.92);
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.7);
+      width: 2.1rem;
+      height: 2.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.3rem;
+      line-height: 1;
+      user-select: none;
+    }
+
+    .lightbox-arrow-left {
+      left: 0.6rem;
+    }
+
+    .lightbox-arrow-right {
+      right: 0.6rem;
+    }
+
+    .lightbox-arrow:hover,
+    .lightbox-close:hover {
+      border-color: rgba(249,115,22,0.9);
+    }
+
+    .lightbox-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.85rem;
+    }
+
+    .lightbox-controls-left {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .lightbox-nav-btn {
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.7);
+      background: rgba(15,23,42,0.98);
+      padding: 0.35rem 0.8rem;
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+
+    .lightbox-nav-btn:hover {
+      border-color: rgba(249,115,22,0.9);
+    }
+
+    .lightbox-caption {
+      opacity: 0.9;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-right {
+        order: -1;
+      }
+
+      #contact {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      nav ul {
+        gap: 0.9rem;
+        font-size: 0.85rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-sub {
+        font-size: 0.95rem;
+      }
+
+      .categories-intro {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-badge">S</div>
+        <div>Seb.p Photographie</div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#top">Accueil</a></li>
+          <li><a href="#galeries">Galeries</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Photographie <span>sport & studio</span> dans le Lauragais</h1>
+        <p class="hero-sub">
+          Hockey sur glace, football, équitation, portraits studio...  
+          Je capture l’intensité des matchs, les émotions et les détails qui comptent vraiment pour vous.
+        </p>
+
+        <div class="hero-badges">
+          <div class="hero-badge">Hockey sur glace</div>
+          <div class="hero-badge">Football</div>
+          <div class="hero-badge">Équitation</div>
+          <div class="hero-badge">Portrait studio</div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#galeries" class="btn-primary">Voir les images</a>
+          <a href="#contact" class="btn-ghost">Parler de votre projet</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-preview">
+          <div class="hero-preview-inner">
+            <!-- Mets ici une de tes images horizontales -->
+            <img src="images/hockey-1.jpg" alt="Aperçu Seb.p Photographie">
+            <div class="hero-tag">
+              <span class="hero-tag-dot"></span>
+              <span>Action en direct – séances sport & studio</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIES / CATEGORIES -->
+    <section id="galeries">
+      <div class="section-heading">
+        <h2>Galeries par univers</h2>
+        <p>
+          Quelques exemples de mes derniers shootings.  
+          Chaque univers possède sa galerie dédiée avec plusieurs images sélectionnées.
+        </p>
+      </div>
+
+      <p class="categories-intro">
+        <span>Choisis un univers ci-dessous</span> et clique dessus pour voir la galerie complète 👇
+      </p>
+
+      <div class="categories-grid">
+        <div class="category-card" data-category="hockey">
+          <img src="images/hockey-1.jpg" alt="Hockey sur glace - Galerie">
+          <div class="category-overlay">
+            <div class="category-title">Hockey sur glace</div>
+            <div class="category-subtitle">Matchs, intensité & vitesse sur glace</div>
+            <div class="category-cta">
+              Voir la galerie
+              <span class="chevron">›</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="category-card" data-category="foot">
+          <img src="images/foot-1.jpg" alt="Football - Galerie">
+          <div class="category-overlay">
+            <div class="category-title">Football</div>
+            <div class="category-subtitle">Actions de jeu, célébrations & émotions</div>
+            <div class="category-cta">
+              Voir la galerie
+              <span class="chevron">›</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="category-card" data-category="equitation">
+          <img src="images/equitation-1.jpg" alt="Équitation - Galerie">
+          <div class="category-overlay">
+            <div class="category-title">Équitation</div>
+            <div class="category-subtitle">Sauts, dressage & complicité cavalier / cheval</div>
+            <div class="category-cta">
+              Voir la galerie
+              <span class="chevron">›</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="category-card" data-category="portrait">
+          <img src="images/portrait-1.jpg" alt="Portrait studio - Galerie">
+          <div class="category-overlay">
+            <div class="category-title">Portrait studio</div>
+            <div class="category-subtitle">Lumière maîtrisée & regard impactant</div>
+            <div class="category-cta">
+              Voir la galerie
+              <span class="chevron">›</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="category-card" data-category="boudoir">
+          <img src="images/boudoir-1.jpg" alt="Boudoir - Galerie">
+          <div class="category-overlay">
+            <div class="category-title">Boudoir</div>
+            <div class="category-subtitle">Ambiance intime, élégante et respectueuse</div>
+            <div class="category-cta">
+              Voir la galerie
+              <span class="chevron">›</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / RESEAUX -->
+    <section id="contact">
+      <div class="contact-text">
+        <div class="section-heading">
+          <h2>Me contacter</h2>
+        </div>
+        <p>
+          Envie d’immortaliser un match, une compétition, une séance studio ou un projet plus créatif&nbsp;?
+          Parlons-en ensemble pour construire un shooting qui vous ressemble.
+        </p>
+
+        <div class="contact-infos">
+          <div>Téléphone : <strong>06 34 23 55 57</strong></div>
+          <div>E-mail : <strong>seb.p.photo@example.com</strong></div>
+          <div>Basé près de Toulouse / Lauragais</div>
+        </div>
+
+        <div class="socials">
+          <a class="social-chip" href="https://www.instagram.com" target="_blank" rel="noopener">
+            <span>📸</span> <span>Instagram</span>
+          </a>
+          <a class="social-chip" href="https://www.facebook.com" target="_blank" rel="noopener">
+            <span>👍</span> <span>Facebook</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <h3>Réserver un shooting</h3>
+        <p>
+          Sport, portrait ou projet sur mesure : je vous propose un accompagnement simple,
+          clair, avec un rendu final prêt à être partagé ou imprimé.
+        </p>
+        <p class="contact-card-cta">
+          Envoyez-moi un message ou appelez le <strong>06 34 23 55 57</strong> pour vérifier
+          mes disponibilités sur vos dates.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Seb.p Photographie – Tous droits réservés.
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox-backdrop" id="lightbox">
+    <div class="lightbox-inner">
+      <div class="lightbox-main">
+        <!-- croix -->
+        <button class="lightbox-close" id="lightboxClose">✕</button>
+        <!-- flèches gauche/droite -->
+        <button class="lightbox-arrow lightbox-arrow-left" id="arrowLeft">‹</button>
+        <button class="lightbox-arrow lightbox-arrow-right" id="arrowRight">›</button>
+
+        <img id="lightboxImage" src="" alt="">
+      </div>
+      <div class="lightbox-controls">
+        <div class="lightbox-controls-left">
+          <button class="lightbox-nav-btn" id="prevBtn">‹ Précédente</button>
+          <button class="lightbox-nav-btn" id="nextBtn">Suivante ›</button>
+        </div>
+        <div class="lightbox-caption" id="lightboxCaption">
+          <!-- rempli en JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Année automatique dans le footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // --------- CONFIG DES GALERIES ----------
+    const galleryConfig = {
+      hockey:  { label: "Hockey sur glace",  prefix: "hockey" },
+      foot:    { label: "Football",          prefix: "foot" },
+      equitation: { label: "Équitation",    prefix: "equitation" },
+      portrait:   { label: "Portrait studio", prefix: "portrait" },
+      boudoir:    { label: "Boudoir",         prefix: "boudoir" }
+    };
+
+    let currentCategory = null;
+    let currentImages = [];
+    let currentIndex = 0;
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightboxImage");
+    const lightboxCaption = document.getElementById("lightboxCaption");
+    const btnPrev = document.getElementById("prevBtn");
+    const btnNext = document.getElementById("nextBtn");
+    const btnClose = document.getElementById("lightboxClose");
+    const arrowLeft = document.getElementById("arrowLeft");
+    const arrowRight = document.getElementById("arrowRight");
+
+    // --------- OUVERTURE DES CARTES ----------
+    document.querySelectorAll(".category-card").forEach(card => {
+      card.addEventListener("click", () => {
+        const category = card.dataset.category;
+        openCategory(category);
+      });
+    });
+
+    function openCategory(category) {
+      const conf = galleryConfig[category];
+      if (!conf) return;
+
+      currentCategory = category;
+      currentImages = [];
+      currentIndex = 0;
+
+      const maxImages = 20;
+      for (let i = 1; i <= maxImages; i++) {
+        const base = "images/" + conf.prefix + "-" + i;
+        const exts = ["jpg", "JPG", "jpeg", "JPEG"];
+
+        exts.forEach(ext => {
+          const url = base + "." + ext;
+
+          const img = new Image();
+          img.onload = function() {
+            if (!currentImages.includes(url)) {
+              currentImages.push(url);
+              // dès qu’on a la première image, on affiche
+              if (currentImages.length === 1) {
+                showLightbox(0);
+              }
+            }
+          };
+          img.onerror = function() {};
+          img.src = url;
+        });
+      }
+
+      setTimeout(() => {
+        if (currentImages.length === 0) {
+          alert("Aucune image trouvée pour cette galerie pour le moment.");
+        }
+      }, 800);
+    }
+
+    function showLightbox(index) {
+      if (!currentImages.length) return;
+
+      if (index < 0) index = currentImages.length - 1;
+      if (index >= currentImages.length) index = 0;
+      currentIndex = index;
+
+      lightboxImg.src = currentImages[currentIndex];
+
+      const conf = galleryConfig[currentCategory] || { label: "" };
+      lightboxCaption.textContent =
+        (conf.label || "") +
+        " – photo " + (currentIndex + 1) + " / " + currentImages.length;
+
+      lightbox.classList.add("visible");
+    }
+
+    function showPrev() {
+      showLightbox(currentIndex - 1);
+    }
+
+    function showNext() {
+      showLightbox(currentIndex + 1);
+    }
+
+    btnPrev.addEventListener("click", showPrev);
+    btnNext.addEventListener("click", showNext);
+    arrowLeft.addEventListener("click", showPrev);
+    arrowRight.addEventListener("click", showNext);
+
+    btnClose.addEventListener("click", () => {
+      lightbox.classList.remove("visible");
+    });
+
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove("visible");
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (!lightbox.classList.contains("visible")) return;
+      if (e.key === "Escape") {
+        lightbox.classList.remove("visible");
+      } else if (e.key === "ArrowLeft") {
+        showPrev();
+      } else if (e.key === "ArrowRight") {
+        showNext();
+      }
+    });
+  </script>
+</body>
+</html>
