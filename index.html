@@ -624,27 +624,30 @@
       transform: scale(1);
     }
 
+    /* === MODIF ORANGE POUR LES FLÈCHES ET LA CROIX === */
     .lightbox-arrow {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.8);
-      background: rgba(15, 23, 42, 0.8);
-      color: #e5e7eb;
+      border: 2px solid #f97316;         /* contour orange */
+      background: rgba(0, 0, 0, 0.75);    /* fond sombre */
+      color: #f97316;                     /* flèche orange */
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       cursor: pointer;
-      transition: background 0.15s ease-out, transform 0.1s ease-out;
+      transition: background 0.15s ease-out, transform 0.1s ease-out, box-shadow 0.15s ease-out, color 0.15s ease-out;
     }
 
     .lightbox-arrow:hover {
-      background: rgba(30, 64, 175, 0.9);
-      transform: translateY(-50%) scale(1.03);
+      background: #f97316;
+      color: #0b1120;
+      transform: translateY(-50%) scale(1.05);
+      box-shadow: 0 0 18px rgba(249, 115, 22, 0.8);
     }
 
     .lightbox-prev { left: 0.75rem; }
@@ -654,17 +657,25 @@
       position: absolute;
       top: 0.75rem;
       right: 0.75rem;
-      width: 32px;
-      height: 32px;
+      width: 34px;
+      height: 34px;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.8);
-      background: rgba(15, 23, 42, 0.8);
-      color: #e5e7eb;
-      font-size: 1.1rem;
+      border: 2px solid #f97316;        /* contour orange */
+      background: rgba(0, 0, 0, 0.8);   /* fond sombre */
+      color: #f97316;                   /* croix orange */
+      font-size: 1.3rem;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      transition: background 0.15s ease-out, box-shadow 0.15s ease-out, color 0.15s ease-out, transform 0.1s ease-out;
+    }
+
+    .lightbox-close:hover {
+      background: #f97316;
+      color: #0b1120;
+      box-shadow: 0 0 18px rgba(249, 115, 22, 0.8);
+      transform: scale(1.05);
     }
 
     @media (max-width: 640px) {
