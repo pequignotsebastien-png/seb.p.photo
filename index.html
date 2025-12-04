@@ -53,15 +53,9 @@
       --border: rgba(148, 163, 184, 0.3);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html, body {
-      height: 100%;
-    }
+    html, body { height: 100%; }
 
     body {
       font-family: "Poppins", system-ui, sans-serif;
@@ -71,682 +65,152 @@
       overflow-x: hidden;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+    img { max-width: 100%; display: block; }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
 
-    .page-wrapper {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+    .page-wrapper { min-height: 100vh; display: flex; flex-direction: column; }
+    main { flex: 1; }
 
-    main {
-      flex: 1;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 1.25rem;
-    }
-
-    section {
-      padding: 3.5rem 0;
-    }
+    .container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 1.25rem; }
+    section { padding: 3.5rem 0; }
 
     /* HEADER */
     header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      position: sticky; top: 0; z-index: 10;
       background: rgba(15, 23, 42, 0.95);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
 
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 3.5rem;
-    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 3.5rem; }
+    .brand { display: flex; align-items: center; gap: 0.6rem; }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
+    .brand-logo { width: 44px; height: 44px; border-radius: 999px; overflow: hidden; border: 2px solid var(--accent); background: #020617; display: flex; align-items: center; justify-content: center; padding: 2px; }
+    .brand-logo img { width: 100%; height: 100%; object-fit: contain; display: block; }
 
-    .brand-logo {
-      width: 44px;
-      height: 44px;
-      border-radius: 999px;
-      overflow: hidden;
-      border: 2px solid var(--accent);
-      background: #020617;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2px;
-    }
+    .brand-text strong { font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.16em; line-height: 1; }
 
-    .brand-logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .brand-text strong {
-      font-size: 1.05rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      line-height: 1;
-    }
-
-    .nav-links {
-      display: none;
-      gap: 1.2rem;
-      font-size: 0.85rem;
-    }
-
-    .nav-links a {
-      position: relative;
-      padding-bottom: 0.1rem;
-    }
-
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 2px;
-      background: linear-gradient(to right, var(--accent), #f97316);
-      transition: width 0.15s ease-out;
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
+    .nav-links { display: none; gap: 1.2rem; font-size: 0.85rem; }
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.5rem 1.2rem;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      border: 1px solid transparent;
-      cursor: pointer;
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 0.5rem 1.2rem; border-radius: 999px; font-size: 0.85rem;
       background: radial-gradient(circle at top left, #facc15, #eab308 45%, #b45309 100%);
-      color: #0b1120;
-      font-weight: 600;
-      box-shadow: 0 10px 25px rgba(234, 179, 8, 0.4);
-      transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
-      white-space: nowrap;
+      color: #0b1120; font-weight: 600; box-shadow: 0 10px 25px rgba(234, 179, 8, 0.4);
     }
 
-    .btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 16px 35px rgba(234, 179, 8, 0.45);
-    }
+    .nav-toggle { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 999px; border: 1px solid var(--border); background: rgba(15, 23, 42, 0.9); cursor: pointer; }
+    .nav-toggle span { width: 16px; height: 2px; border-radius: 999px; background: #e5e7eb; position: relative; }
+    .nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; left: 0; width: 16px; height: 2px; border-radius: 999px; background: #e5e7eb; }
+    .nav-toggle span::before { top: -5px; } .nav-toggle span::after { top: 5px; }
 
-    /* visible partout, y compris mobile */
-    .nav-cta {
-      display: inline-flex;
-    }
+    .nav-mobile { display: none; flex-direction: column; padding: 0.5rem 0 0.75rem; font-size: 0.85rem; }
 
-    .nav-toggle {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 32px;
-      height: 32px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(15, 23, 42, 0.9);
-      cursor: pointer;
-    }
-
-    .nav-toggle span {
-      width: 16px;
-      height: 2px;
-      border-radius: 999px;
-      background: #e5e7eb;
-      position: relative;
-    }
-
-    .nav-toggle span::before,
-    .nav-toggle span::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      width: 16px;
-      height: 2px;
-      border-radius: 999px;
-      background: #e5e7eb;
-    }
-
-    .nav-toggle span::before {
-      top: -5px;
-    }
-
-    .nav-toggle span::after {
-      top: 5px;
-    }
-
-    .nav-mobile {
-      display: none;
-      flex-direction: column;
-      padding: 0.5rem 0 0.75rem;
-      font-size: 0.85rem;
-    }
-
-    .nav-mobile a {
-      padding: 0.35rem 0;
-      border-bottom: 1px solid rgba(31, 41, 55, 0.9);
-    }
-
-    .nav-mobile a:last-child {
-      border-bottom: none;
-    }
-
-    /* TITRES DE SECTION */
-    .section-header {
-      margin-bottom: 1.8rem;
-      text-align: left;
-    }
-
-    .section-kicker {
-      font-size: 1.05rem;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: var(--accent);
-      margin-bottom: 0.45rem;
-      font-weight: 800;
-      text-decoration: underline;
-      text-decoration-thickness: 2px;
-      text-underline-offset: 4px;
-    }
-
-    .section-title {
-      font-size: 1.6rem;
-      font-weight: 600;
-      letter-spacing: -0.04em;
-      margin-bottom: 0.2rem;
-    }
-
-    .section-subtitle {
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    .mini-text {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 0.5rem;
-    }
+    /* TITRES */
+    .section-header { margin-bottom: 1.8rem; text-align: left; }
+    .section-kicker { font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--accent); margin-bottom: 0.45rem; font-weight: 800; text-decoration: underline; text-underline-offset: 4px; }
+    .section-title { font-size: 1.6rem; font-weight: 600; letter-spacing: -0.04em; margin-bottom: 0.2rem; }
+    .section-subtitle { font-size: 0.85rem; color: var(--muted); }
+    .mini-text { font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem; }
 
     /* HERO */
-    #accueil {
-      padding-top: 3.8rem;
-      padding-bottom: 3.2rem;
-    }
-
-    .hero {
-      display: grid;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .hero-title {
-      font-size: 2.1rem;
-      line-height: 1.1;
-      letter-spacing: -0.05em;
-      margin-bottom: 0.4rem;
-    }
-
-    .hero-title span {
-      background: linear-gradient(to right, #facc15, #f97316, #fb7185);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .hero-text {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-bottom: 1rem;
-      max-width: 30rem;
-    }
-
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.75rem;
-      font-size: 0.75rem;
-    }
-
-    .tag {
-      padding: 0.15rem 0.6rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      background: rgba(15, 23, 42, 0.85);
-      color: var(--muted);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      font-family: inherit;
-      transition: border-color 0.1s ease-out, color 0.1s ease-out, background 0.1s ease-out;
-    }
-
-    .tag:hover {
-      border-color: var(--accent);
-      color: var(--text);
-      background: rgba(15, 23, 42, 1);
-    }
-
-    .hero-visual {
-      background: radial-gradient(circle at top, #020617, #000 70%);
-      border-radius: 1.4rem;
-      padding: 0.7rem;
-      border: 1px solid var(--border);
-    }
-
-    .hero-photo {
-      border-radius: 1.1rem;
-      overflow: hidden;
-      background: #000;
-      aspect-ratio: 4 / 3;
-    }
-
-    .hero-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-      background: #000;
-    }
-
-    /* Bloc réseaux sociaux */
-    .hero-social {
-      margin-top: 1.1rem;
-      padding: 0.7rem 0.85rem;
-      border-radius: 0.9rem;
-      border: 1px solid rgba(234, 179, 8, 0.4);
-      background: radial-gradient(circle at top left, rgba(234, 179, 8, 0.14), rgba(15, 23, 42, 0.95));
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 0.8rem;
-    }
-
-    .hero-social-label {
-      font-weight: 600;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 0.7rem;
-    }
-
-    .hero-social-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .social-btn {
-      padding: 0.25rem 0.8rem;
-      border-radius: 999px;
-      border: 1px solid var(--accent);
-      background: rgba(15, 23, 42, 0.96);
-      font-size: 0.8rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.35rem;
-      box-shadow: 0 8px 18px rgba(234, 179, 8, 0.25);
-      cursor: pointer;
-      transition: transform 0.1s ease-out, box-shadow 0.1s ease-out, background 0.1s ease-out;
-    }
-
-    .social-btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 12px 24px rgba(234, 179, 8, 0.35);
-      background: rgba(24, 35, 70, 0.98);
-    }
-
-    .social-icon {
-      width: 14px;
-      height: 14px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
+    .hero { display: grid; gap: 2rem; align-items: center; }
+    .hero-title { font-size: 2.1rem; line-height: 1.1; letter-spacing: -0.05em; margin-bottom: 0.4rem; }
+    .hero-title span { background: linear-gradient(to right, #facc15, #f97316, #fb7185); -webkit-background-clip: text; color: transparent; }
+    .hero-photo { border-radius: 1.1rem; overflow: hidden; background: #000; aspect-ratio: 4 / 3; }
+    .hero-photo img { width: 100%; height: 100%; object-fit: contain; display: block; background: #000; }
 
     /* CARTES DE COLLECTIONS */
-    .collections {
-      display: grid;
-      gap: 0.9rem;
-    }
-
-    .collections-3 {
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    }
+    .collections { display: grid; gap: 0.9rem; }
+    .collections-3 { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
 
     .collection-card {
-      border-radius: 1rem;
-      overflow: hidden;
-      border: 1px solid rgba(31, 41, 55, 0.95);
-      background: #020617;
-      display: flex;
-      flex-direction: column;
-      cursor: pointer;
-      transition: transform 0.15s ease-out, box-shadow 0.15s ease-out, border-color 0.15s ease-out;
+      border-radius: 1rem; overflow: hidden; border: 1px solid rgba(31, 41, 55, 0.95);
+      background: #020617; display: flex; flex-direction: column; cursor: pointer;
     }
 
-    .collection-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.65);
-      border-color: rgba(234, 179, 8, 0.5);
-    }
+    .collection-card:hover { transform: translateY(-2px); box-shadow: 0 18px 40px rgba(15, 23, 42, 0.65); border-color: rgba(234, 179, 8, 0.5); }
 
+    /* <-- CHANGEMENT : miniatures affichent la photo entière (contain) --> */
     .collection-thumb {
-      aspect-ratio: 3 / 2;
+      aspect-ratio: 4 / 3;
       background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
     }
 
     .collection-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      background: #000;
-    }
-
-    .collection-body {
-      padding: 0.6rem 0.75rem 0.75rem;
-      font-size: 0.82rem;
-    }
-
-    .collection-title {
-      font-weight: 600;
-      margin-bottom: 0.2rem;
-    }
-
-    .collection-meta {
-      font-size: 0.75rem;
-      color: var(--muted);
-    }
-
-    .collection-link {
-      margin-top: 0.45rem;
-      font-size: 0.78rem;
-      color: var(--accent);
-    }
-
-    /* A PROPOS */
-    .about-text {
-      font-size: 0.9rem;
-      color: var(--muted);
-      max-width: 32rem;
-    }
-
-    .about-text strong {
-      color: var(--text);
-    }
-
-    /* CONTACT */
-    #contact {
-      background: radial-gradient(circle at top left, rgba(234, 179, 8, 0.09), transparent 60%);
-      border-top: 1px solid var(--border);
-    }
-
-    .contact-layout {
-      display: grid;
-      gap: 1.5rem;
-    }
-
-    form {
-      display: grid;
-      gap: 0.75rem;
-    }
-
-    label {
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    input,
-    textarea,
-    select {
-      width: 100%;
-      border-radius: 0.7rem;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      background: rgba(15, 23, 42, 0.95);
-      padding: 0.5rem 0.7rem;
-      font-size: 0.85rem;
-      color: var(--text);
-      font-family: inherit;
-      outline: none;
-      transition: border-color 0.1s ease-out, box-shadow 0.1s ease-out, background 0.1s ease-out;
-      resize: vertical;
-    }
-
-    input:focus,
-    textarea:focus,
-    select:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 1px rgba(234, 179, 8, 0.3);
-      background: rgba(15, 23, 42, 1);
-    }
-
-    textarea {
-      min-height: 110px;
-    }
-
-    .contact-info {
-      font-size: 0.85rem;
-      color: var(--muted);
-      display: flex;
-      flex-direction: column;
-      gap: 0.7rem;
-    }
-
-    .highlight {
-      border-radius: 0.9rem;
-      border: 1px solid var(--border);
-      padding: 0.7rem 0.8rem;
-      background: rgba(15, 23, 42, 0.96);
-      font-size: 0.8rem;
-    }
-
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.4rem;
-    }
-
-    .chip {
-      padding: 0.18rem 0.6rem;
-      border-radius: 999px;
-      border: 1px dashed var(--accent);
-      background: rgba(15, 23, 42, 0.95);
-      font-size: 0.75rem;
-    }
-
-    /* FOOTER */
-    footer {
-      border-top: 1px solid rgba(15, 23, 42, 0.9);
-      padding: 1rem 0 1.2rem;
-      font-size: 0.75rem;
-      color: var(--muted);
-    }
-
-    .footer-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.7rem;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    /* LIGHTBOX */
-    .lightbox {
-      position: fixed;
-      inset: 0;
-      background: radial-gradient(circle at center, rgba(15, 23, 42, 0.9), rgba(0, 0, 0, 0.98));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      visibility: hidden;
-      opacity: 0;
-      transition: opacity 0.25s ease-in-out;
-    }
-
-    .lightbox.visible {
-      visibility: visible;
-      opacity: 1;
-    }
-
-    .lightbox-inner {
-      position: relative;
-      max-width: 95vw;
-      max-height: 95vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .lightbox-inner img {
       max-width: 100%;
-      max-height: 95vh;
+      max-height: 100%;
       width: auto;
       height: auto;
       object-fit: contain;
-      border-radius: 1rem;
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
-      opacity: 0;
-      transform: scale(0.98);
-      transition: opacity 0.4s ease, transform 0.4s ease;
       background: #000;
-      position: relative;
-      z-index: 1;
+      display: block;
     }
 
-    .lightbox-inner img.visible {
-      opacity: 1;
-      transform: scale(1);
+    .collection-body { padding: 0.6rem 0.75rem 0.75rem; font-size: 0.82rem; }
+    .collection-title { font-weight: 600; margin-bottom: 0.2rem; }
+    .collection-meta { font-size: 0.75rem; color: var(--muted); }
+    .collection-link { margin-top: 0.45rem; font-size: 0.78rem; color: var(--accent); }
+
+    /* CONTACT / FOOTER / LIGHTBOX */
+    #contact { background: radial-gradient(circle at top left, rgba(234, 179, 8, 0.09), transparent 60%); border-top: 1px solid var(--border); }
+    .contact-layout { display: grid; gap: 1.5rem; }
+
+    footer { border-top: 1px solid rgba(15, 23, 42, 0.9); padding: 1rem 0 1.2rem; font-size: 0.75rem; color: var(--muted); }
+
+    .lightbox {
+      position: fixed; inset: 0;
+      background: radial-gradient(circle at center, rgba(15, 23, 42, 0.9), rgba(0, 0, 0, 0.98));
+      display: flex; align-items: center; justify-content: center;
+      z-index: 9999; visibility: hidden; opacity: 0; transition: opacity 0.25s ease-in-out;
     }
+
+    .lightbox.visible { visibility: visible; opacity: 1; }
+
+    .lightbox-inner {
+      position: relative; max-width: 95vw; max-height: 95vh; display: flex; align-items: center; justify-content: center;
+    }
+
+    .lightbox-inner img {
+      max-width: 100%; max-height: 95vh; width: auto; height: auto; object-fit: contain;
+      border-radius: 1rem; box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+      opacity: 0; transform: scale(0.98); transition: opacity 0.4s ease, transform 0.4s ease; background: #000; position: relative; z-index: 1;
+    }
+
+    .lightbox-inner img.visible { opacity: 1; transform: scale(1); }
 
     .lightbox-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 40px;
-      height: 40px;
-      border-radius: 999px;
-      border: 1px solid var(--accent);
-      background: rgba(15, 23, 42, 0.9);
-      color: var(--accent);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.6rem;
-      cursor: pointer;
-      transition: background 0.15s ease-out, transform 0.1s ease-out, color 0.15s ease-out;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-      z-index: 2;
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 40px; height: 40px; border-radius: 999px; border: 1px solid var(--accent); background: rgba(15, 23, 42, 0.9);
+      color: var(--accent); display: inline-flex; align-items: center; justify-content: center; font-size: 1.6rem; cursor: pointer; z-index: 2;
     }
 
-    .lightbox-arrow:hover {
-      background: var(--accent);
-      color: #0b1120;
-      transform: translateY(-50%) scale(1.05);
-    }
-
-    .lightbox-prev { left: 0.75rem; }
-    .lightbox-next { right: 0.75rem; }
+    .lightbox-prev { left: 0.75rem; } .lightbox-next { right: 0.75rem; }
 
     .lightbox-close {
-      position: absolute;
-      top: 0.75rem;
-      right: 0.75rem;
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      border: 1px solid var(--accent);
-      background: rgba(15, 23, 42, 0.9);
-      color: var(--accent);
-      font-size: 1.3rem;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-      transition: background 0.15s ease-out, color 0.15s ease-out, transform 0.1s ease-out;
-      z-index: 2;
-    }
-
-    .lightbox-close:hover {
-      background: var(--accent);
-      color: #0b1120;
-      transform: scale(1.05);
-    }
-
-    @media (max-width: 640px) {
-      .lightbox-prev { left: 0.4rem; }
-      .lightbox-next { right: 0.4rem; }
-      .lightbox-close { top: 0.5rem; right: 0.5rem; }
+      position: absolute; top: 0.75rem; right: 0.75rem; width: 34px; height: 34px; border-radius: 999px;
+      border: 1px solid var(--accent); background: rgba(15, 23, 42, 0.9); color: var(--accent); display: inline-flex; align-items: center; justify-content: center; z-index: 2;
     }
 
     @media (min-width: 1024px) {
       .hero-title { font-size: 2.5rem; }
-
-      .collections-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
+      .collections-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     }
 
     @media (min-width: 768px) {
-      #accueil {
-        padding-top: 4.2rem;
-        padding-bottom: 3.6rem;
-      }
-
-      .hero {
-        grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.45fr);
-      }
-
-      .nav-links { display: flex; }
-      .nav-toggle,
-      .nav-mobile { display: none; }
-
-      .contact-layout {
-        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-        align-items: flex-start;
-      }
+      #accueil { padding-top: 4.2rem; padding-bottom: 3.6rem; }
+      .hero { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.45fr); }
+      .nav-links { display: flex; } .nav-toggle, .nav-mobile { display: none; }
+      .contact-layout { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); align-items: flex-start; }
     }
   </style>
 
-  <!-- Données structurées Schema.org : LocalBusiness -->
+  <!-- Données structurées -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -758,51 +222,10 @@
     "url": "https://sebpphoto.fr/",
     "telephone": "+33634235557",
     "priceRange": "€€",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Montlaur",
-      "addressLocality": "Montlaur",
-      "postalCode": "31450",
-      "addressCountry": "FR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 43.4889,
-      "longitude": 1.6000
-    },
-    "sameAs": [
-      "https://www.instagram.com/seb.p.photo/",
-      "https://www.facebook.com/seb.p.photo/"
-    ],
-    "description": "Photographe sportif et portrait à Montlaur (Toulouse) : hockey sur glace, football, équitation, sport mécanique, portraits studio, portraits en extérieur et séances boudoir élégantes et respectueuses.",
-    "knowsAbout": [
-      "Photographie sportive",
-      "Hockey sur glace",
-      "Football",
-      "Équitation",
-      "Sport mécanique",
-      "Portrait studio",
-      "Portrait extérieur",
-      "Boudoir"
-    ],
-    "areaServed": {
-      "@type": "AdministrativeArea",
-      "name": "Toulouse et Lauragais"
-    }
-  }
-  </script>
-
-  <!-- Données structurées WebSite -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "SEB.P PHOTOGRAPHY",
-    "url": "https://sebpphoto.fr/",
-    "publisher": {
-      "@type": "Person",
-      "name": "Sébastien Pequignot"
-    }
+    "address": { "@type": "PostalAddress", "streetAddress": "Montlaur", "addressLocality": "Montlaur", "postalCode": "31450", "addressCountry": "FR" },
+    "geo": { "@type": "GeoCoordinates", "latitude": 43.4889, "longitude": 1.6000 },
+    "sameAs": [ "https://www.instagram.com/seb.p.photo/", "https://www.facebook.com/seb.p.photo/" ],
+    "description": "Photographe sportif et portrait à Montlaur (Toulouse) : hockey sur glace, football, équitation, sport mécanique, portraits studio, portraits en extérieur et séances boudoir élégantes et respectueuses."
   }
   </script>
 </head>
@@ -814,9 +237,7 @@
         <div class="brand-logo">
           <img src="images/logo-photo.png" alt="Logo SEB.P PHOTOGRAPHY photographe sportif et portrait à Montlaur" />
         </div>
-        <div class="brand-text">
-          <strong>SEB.P PHOTOGRAPHY</strong>
-        </div>
+        <div class="brand-text"><strong>SEB.P PHOTOGRAPHY</strong></div>
       </div>
 
       <nav class="nav-links">
@@ -826,13 +247,8 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <button class="btn nav-cta" onclick="scrollToId('contact')">
-        Réserver une séance
-      </button>
-
-      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">
-        <span></span>
-      </button>
+      <button class="btn nav-cta" onclick="scrollToId('contact')">Réserver une séance</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu"><span></span></button>
     </div>
 
     <div class="container nav-mobile" id="navMobile">
@@ -848,44 +264,19 @@
     <section id="accueil">
       <div class="container hero">
         <div>
-          <h1 class="hero-title">
-            L’intensité du <span>sport</span>, la force du <span>portrait</span>.
-          </h1>
-          <p class="hero-text">
-            Installé à Montlaur, près de Toulouse, je mets mon objectif au service du mouvement, de l’émotion et du regard.
-            Que ce soit sur la glace, sur un terrain, sur un circuit ou en studio, chaque image raconte une histoire.
-          </p>
-          <button class="btn" onclick="scrollToId('galerie-sport')">
-            Voir les images
-          </button>
+          <h1 class="hero-title">L’intensité du <span>sport</span>, la force du <span>portrait</span>.</h1>
+          <p class="hero-text">Installé à Montlaur, près de Toulouse, je mets mon objectif au service du mouvement, de l’émotion et du regard. Que ce soit sur la glace, sur un terrain, sur un circuit ou en studio, chaque image raconte une histoire.</p>
+          <button class="btn" onclick="scrollToId('galerie-sport')">Voir les images</button>
 
-          <!-- Réseaux sociaux -->
-          <div class="hero-social">
+          <div class="hero-social" style="margin-top:1.1rem; padding:0.7rem 0.85rem;">
             <span class="hero-social-label">Me suivre :</span>
-            <div class="hero-social-links">
-              <a class="social-btn" href="https://www.instagram.com/seb.p.photo" target="_blank" rel="noopener">
-                <span class="social-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="14" height="14">
-                    <rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="#eab308" stroke-width="1.6"/>
-                    <circle cx="12" cy="12" r="4.2" fill="none" stroke="#eab308" stroke-width="1.6"/>
-                    <circle cx="17" cy="7" r="1.3" fill="#eab308"/>
-                  </svg>
-                </span>
-                Instagram
-              </a>
-              <a class="social-btn" href="https://www.facebook.com/seb.p.photo" target="_blank" rel="noopener">
-                <span class="social-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="14" height="14">
-                    <path d="M14.5 4H16.5V7H14.5C13.7 7 13 7.7 13 8.5V10H16.5V13H13V20H10V13H7.5V10H10V8.5C10 6.6 11.6 5 13.5 5H14.5Z" fill="#eab308"/>
-                  </svg>
-                </span>
-                Facebook
-              </a>
+            <div style="display:flex; gap:0.5rem; margin-left:0.6rem;">
+              <a class="social-btn" href="https://www.instagram.com/seb.p.photo" target="_blank" rel="noopener">Instagram</a>
+              <a class="social-btn" href="https://www.facebook.com/seb.p.photo" target="_blank" rel="noopener">Facebook</a>
             </div>
           </div>
 
-          <!-- Boutons de raccourci : ouvrent la série correspondante -->
-          <div class="hero-tags">
+          <div class="hero-tags" style="margin-top:0.8rem;">
             <button class="tag" type="button" onclick="openLightbox('hockey', 0)">Hockey sur glace</button>
             <button class="tag" type="button" onclick="openLightbox('foot', 0)">Football</button>
             <button class="tag" type="button" onclick="openLightbox('equitation', 0)">Équitation</button>
@@ -909,16 +300,12 @@
         <div class="section-header">
           <div class="section-kicker">Sport</div>
           <h2 class="section-title">Hockey, football, équitation & sport mécanique</h2>
-          <p class="section-subtitle">
-            Clique sur une catégorie pour faire défiler toutes les photos de la série.
-          </p>
+          <p class="section-subtitle">Clique sur une catégorie pour faire défiler toutes les photos de la série.</p>
         </div>
 
         <div class="collections collections-3">
           <div class="collection-card" onclick="openLightbox('hockey', 0)">
-            <div class="collection-thumb">
-              <img src="images/hockey-1.jpg" alt="Galerie hockey sur glace – photos de match par SEB.P PHOTOGRAPHY" />
-            </div>
+            <div class="collection-thumb"><img src="images/hockey-1.jpg" alt="Galerie hockey sur glace – photos de match par SEB.P PHOTOGRAPHY" /></div>
             <div class="collection-body">
               <div class="collection-title">Hockey sur glace</div>
               <div class="collection-meta">Série d’images en situation de match.</div>
@@ -927,9 +314,7 @@
           </div>
 
           <div class="collection-card" onclick="openLightbox('foot', 0)">
-            <div class="collection-thumb">
-              <img src="images/foot-1.jpg" alt="Galerie football – actions et émotions sur le terrain" />
-            </div>
+            <div class="collection-thumb"><img src="images/foot-1.jpg" alt="Galerie football – actions et émotions sur le terrain" /></div>
             <div class="collection-body">
               <div class="collection-title">Football</div>
               <div class="collection-meta">Actions, duels et émotions sur le terrain.</div>
@@ -938,9 +323,7 @@
           </div>
 
           <div class="collection-card" onclick="openLightbox('equitation', 0)">
-            <div class="collection-thumb">
-              <img src="images/equitation-1.jpg" alt="Galerie équitation – cavaliers et chevaux en concours" />
-            </div>
+            <div class="collection-thumb"><img src="images/equitation-1.jpg" alt="Galerie équitation – cavaliers et chevaux en concours" /></div>
             <div class="collection-body">
               <div class="collection-title">Équitation</div>
               <div class="collection-meta">CSO, sauts & portraits cavaliers / chevaux.</div>
@@ -949,9 +332,7 @@
           </div>
 
           <div class="collection-card" onclick="openLightbox('sportmeca', 0)">
-            <div class="collection-thumb">
-              <img src="images/sportmeca-1.jpg" alt="Galerie sport mécanique – photos de circuit, karting, drift" />
-            </div>
+            <div class="collection-thumb"><img src="images/sportmeca-1.jpg" alt="Galerie sport mécanique – photos de circuit, karting, drift" /></div>
             <div class="collection-body">
               <div class="collection-title">Sport mécanique</div>
               <div class="collection-meta">Circuit, karting, drift, rallye…</div>
@@ -960,10 +341,7 @@
           </div>
         </div>
 
-        <p class="mini-text">
-          Matchs, tournois, concours, circuits : possibilité de couvrir un évènement complet ou de créer des portraits
-          de joueurs, pilotes, cavaliers et équipes.
-        </p>
+        <p class="mini-text">Matchs, tournois, concours, circuits : possibilité de couvrir un évènement complet ou de créer des portraits de joueurs, pilotes, cavaliers et équipes.</p>
       </div>
     </section>
 
@@ -973,20 +351,13 @@
         <div class="section-header">
           <div class="section-kicker">Portrait & boudoir</div>
           <h2 class="section-title">Mettre en valeur ta personnalité</h2>
-          <p class="section-subtitle">
-            Portraits simples, naturels ou plus stylisés, et séances boudoir élégantes.
-          </p>
-          <p class="mini-text">
-            Séances sur rendez-vous, dans une ambiance détendue et bienveillante. Guidage des poses,
-            lumière travaillée, retouche naturelle.
-          </p>
+          <p class="section-subtitle">Portraits simples, naturels ou plus stylisés, et séances boudoir élégantes.</p>
+          <p class="mini-text">Séances sur rendez-vous, dans une ambiance détendue et bienveillante. Guidage des poses, lumière travaillée, retouche naturelle.</p>
         </div>
 
         <div class="collections collections-3">
           <div class="collection-card" onclick="openLightbox('portrait-studio', 0)">
-            <div class="collection-thumb">
-              <img src="images/portrait-studio-1.jpg" alt="Galerie portrait studio – lumière maîtrisée et fond travaillé" />
-            </div>
+            <div class="collection-thumb"><img src="images/portrait-studio-1.jpg" alt="Galerie portrait studio – lumière maîtrisée et fond travaillé" /></div>
             <div class="collection-body">
               <div class="collection-title">Portrait studio</div>
               <div class="collection-meta">Lumière maîtrisée, fond travaillé, ambiance posée.</div>
@@ -995,9 +366,7 @@
           </div>
 
           <div class="collection-card" onclick="openLightbox('portrait-exterieur', 0)">
-            <div class="collection-thumb">
-              <img src="images/portrait-exterieur-1.jpg" alt="Galerie portrait extérieur – séances en lumière naturelle" />
-            </div>
+            <div class="collection-thumb"><img src="images/portrait-exterieur-1.jpg" alt="Galerie portrait extérieur – séances en lumière naturelle" /></div>
             <div class="collection-body">
               <div class="collection-title">Portrait en extérieur</div>
               <div class="collection-meta">Lumière naturelle, lieux choisis ensemble.</div>
@@ -1006,9 +375,7 @@
           </div>
 
           <div class="collection-card" onclick="openLightbox('boudoir', 0)">
-            <div class="collection-thumb">
-              <img src="images/boudoir-1.jpg" alt="Galerie boudoir – séances élégantes, intimes et respectueuses" />
-            </div>
+            <div class="collection-thumb"><img src="images/boudoir-1.jpg" alt="Galerie boudoir – séances élégantes, intimes et respectueuses" /></div>
             <div class="collection-body">
               <div class="collection-title">Boudoir</div>
               <div class="collection-meta">Séances élégantes, intimes et respectueuses.</div>
@@ -1026,12 +393,7 @@
           <div class="section-kicker">À propos</div>
           <h2 class="section-title">SEB.P PHOTOGRAPHY – photographe</h2>
         </div>
-        <p class="about-text">
-          <strong>Sportif dans l’âme et passionné d’image</strong>, je photographie aussi bien l’intensité des matchs
-          que des portraits plus posés. Basé à <strong>Montlaur (31450), près de Toulouse</strong>, je me déplace
-          pour couvrir vos évènements sportifs et réaliser des séances portraits ou boudoir, dans une ambiance
-          simple et détendue.
-        </p>
+        <p class="about-text"><strong>Sportif dans l’âme et passionné d’image</strong>, je photographie aussi bien l’intensité des matchs que des portraits plus posés. Basé à <strong>Montlaur (31450), près de Toulouse</strong>, je me déplace pour couvrir vos évènements sportifs et réaliser des séances portraits ou boudoir, dans une ambiance simple et détendue.</p>
       </div>
     </section>
 
@@ -1041,27 +403,14 @@
         <div class="section-header">
           <div class="section-kicker">Contact</div>
           <h2 class="section-title">Parlons de ton projet</h2>
-          <p class="section-subtitle">
-            Dis-moi ce que tu veux faire, je te répondrai avec les dispos et une idée de tarif.
-          </p>
+          <p class="section-subtitle">Dis-moi ce que tu veux faire, je te répondrai avec les dispos et une idée de tarif.</p>
         </div>
 
         <div class="contact-layout">
           <div>
-            <form
-              method="POST"
-              action="https://formspree.io/f/xdkprrlo"
-            >
-              <div>
-                <label for="name">Nom & prénom</label>
-                <input id="name" name="name" type="text" placeholder="Ton nom" required />
-              </div>
-
-              <div>
-                <label for="email">Adresse e-mail</label>
-                <input id="email" name="email" type="email" placeholder="ton-email@exemple.com" required />
-              </div>
-
+            <form method="POST" action="https://formspree.io/f/xdkprrlo">
+              <div><label for="name">Nom & prénom</label><input id="name" name="name" type="text" placeholder="Ton nom" required /></div>
+              <div><label for="email">Adresse e-mail</label><input id="email" name="email" type="email" placeholder="ton-email@exemple.com" required /></div>
               <div>
                 <label for="type">Type de séance</label>
                 <select id="type" name="type" required>
@@ -1072,45 +421,21 @@
                   <option value="autre">Autre / à préciser</option>
                 </select>
               </div>
-
-              <div>
-                <label for="message">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Donne quelques infos : lieu, date(s), type de séance..."
-                  required
-                ></textarea>
-              </div>
-
+              <div><label for="message">Message</label><textarea id="message" name="message" placeholder="Donne quelques infos : lieu, date(s), type de séance..." required></textarea></div>
               <input type="hidden" name="_subject" value="Nouveau message depuis le site SEB.P PHOTOGRAPHY" />
-
               <button class="btn" type="submit">Envoyer ma demande</button>
             </form>
           </div>
 
           <div class="contact-info">
-            <div class="highlight">
-              Basé à Montlaur (31450), près de Toulouse. Disponible pour : matchs, tournois, concours,
-              circuits, séances portraits et boudoir sur rendez-vous.
-            </div>
-
-            <div>
-              <strong>Réseaux sociaux</strong>
+            <div class="highlight">Basé à Montlaur (31450), près de Toulouse. Disponible pour : matchs, tournois, concours, circuits, séances portraits et boudoir sur rendez-vous.</div>
+            <div><strong>Réseaux sociaux</strong>
               <div class="chips">
-                <a class="chip" href="https://www.instagram.com/seb.p.photo" target="_blank" rel="noopener">
-                  Instagram
-                </a>
-                <a class="chip" href="https://www.facebook.com/seb.p.photo" target="_blank" rel="noopener">
-                  Facebook
-                </a>
+                <a class="chip" href="https://www.instagram.com/seb.p.photo" target="_blank" rel="noopener">Instagram</a>
+                <a class="chip" href="https://www.facebook.com/seb.p.photo" target="_blank" rel="noopener">Facebook</a>
               </div>
             </div>
-
-            <div>
-              <strong>E-mail direct</strong><br />
-              <a href="mailto:seb.p.photo@gmail.com">seb.p.photo@gmail.com</a>
-            </div>
+            <div><strong>E-mail direct</strong><br /><a href="mailto:seb.p.photo@gmail.com">seb.p.photo@gmail.com</a></div>
           </div>
         </div>
       </div>
@@ -1149,17 +474,13 @@
   // Menu mobile
   const navToggle = document.getElementById("navToggle");
   const navMobile = document.getElementById("navMobile");
-
   if (navToggle && navMobile) {
     navToggle.addEventListener("click", () => {
       const isOpen = navMobile.style.display === "flex";
       navMobile.style.display = isOpen ? "none" : "flex";
     });
-
     navMobile.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navMobile.style.display = "none";
-      });
+      link.addEventListener("click", () => { navMobile.style.display = "none"; });
     });
   }
 
@@ -1175,7 +496,7 @@
     galleries[galleryKey].push(src);
   }
 
-  // On crée les séries automatiquement à partir des noms de fichiers (1 à 30)
+  // ---- Chargement déterministe des galeries (ordre numérique garanti) ----
   const galleryConfigs = [
     { key: "hockey",            prefix: "hockey-",            max: 30 },
     { key: "foot",              prefix: "foot-",              max: 30 },
@@ -1186,12 +507,24 @@
     { key: "boudoir",           prefix: "boudoir-",           max: 30 }
   ];
 
+  // initialise chaque galerie avec un tableau de la bonne taille (remplis de null)
   galleryConfigs.forEach(cfg => {
+    galleries[cfg.key] = new Array(cfg.max).fill(null);
+
     for (let i = 1; i <= cfg.max; i++) {
-      const img = new Image();
       const src = "images/" + cfg.prefix + i + ".jpg";
-      img.onload = () => registerSrc(cfg.key, src);
-      img.onerror = () => { /* fichier manquant = ignoré */ };
+      const img = new Image();
+
+      // on stocke le src à la position index = i-1 (ordre numérique garanti)
+      ((index, s, key) => {
+        img.onload = function () {
+          galleries[key][index] = s;
+        };
+        img.onerror = function () {
+          // laisse null s'il manque le fichier — on filtrera plus tard
+        };
+      })(i - 1, src, cfg.key);
+
       img.src = src;
     }
   });
@@ -1222,11 +555,21 @@
     lightboxImg.src = src;
   }
 
+  // Remplacée : openLightbox qui filtre les null et garde l'ordre numérique
   function openLightbox(galleryKey, startIndex) {
-    const list = galleries[galleryKey];
-    if (!list || !list.length) return;
+    if (!galleries[galleryKey]) return;
+
+    // on crée une liste nettoyée, dans l'ordre numérique (filtre les trous)
+    const cleanList = galleries[galleryKey].filter(Boolean);
+
+    if (!cleanList || !cleanList.length) return;
+
+    // remplace la galerie par la version nettoyée pour éviter de refaire le filter
+    galleries[galleryKey] = cleanList;
+
     currentGalleryKey = galleryKey;
-    currentIndex = startIndex || 0;
+    currentIndex = (typeof startIndex === 'number' && startIndex < cleanList.length) ? startIndex : 0;
+
     lightbox.classList.add("visible");
     document.body.style.overflow = "hidden";
     updateLightboxImage();
@@ -1255,46 +598,24 @@
     updateLightboxImage();
   }
 
-  lightboxNext.addEventListener("click", (e) => {
-    e.stopPropagation();
-    showNext();
-  });
+  lightboxNext.addEventListener("click", (e) => { e.stopPropagation(); showNext(); });
+  lightboxPrev.addEventListener("click", (e) => { e.stopPropagation(); showPrev(); });
+  lightboxClose.addEventListener("click", (e) => { e.stopPropagation(); closeLightbox(); });
 
-  lightboxPrev.addEventListener("click", (e) => {
-    e.stopPropagation();
-    showPrev();
-  });
-
-  lightboxClose.addEventListener("click", (e) => {
-    e.stopPropagation();
-    closeLightbox();
-  });
-
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) {
-      closeLightbox();
-    }
-  });
+  lightbox.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
 
   document.addEventListener("keydown", (e) => {
     if (!lightbox.classList.contains("visible")) return;
-    if (e.key === "ArrowRight") {
-      showNext();
-    } else if (e.key === "ArrowLeft") {
-      showPrev();
-    } else if (e.key === "Escape") {
-      closeLightbox();
-    }
+    if (e.key === "ArrowRight") showNext();
+    else if (e.key === "ArrowLeft") showPrev();
+    else if (e.key === "Escape") closeLightbox();
   });
 
   // Swipe mobile
   let touchStartX = 0;
-
   lightbox.addEventListener("touchstart", (e) => {
     if (!lightbox.classList.contains("visible")) return;
-    if (e.touches && e.touches.length === 1) {
-      touchStartX = e.touches[0].clientX;
-    }
+    if (e.touches && e.touches.length === 1) touchStartX = e.touches[0].clientX;
   });
 
   lightbox.addEventListener("touchend", (e) => {
@@ -1302,11 +623,8 @@
     if (!e.changedTouches || e.changedTouches.length !== 1) return;
     const dx = e.changedTouches[0].clientX - touchStartX;
     const threshold = 40;
-    if (dx > threshold) {
-      showPrev();
-    } else if (dx < -threshold) {
-      showNext();
-    }
+    if (dx > threshold) showPrev();
+    else if (dx < -threshold) showNext();
   });
 </script>
 </body>
