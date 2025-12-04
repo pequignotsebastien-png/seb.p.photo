@@ -2,19 +2,35 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>SEB.P PHOTOGRAPHY – Photographe sportif & portrait à Toulouse / Montlaur</title>
+  <title>SEB.P PHOTOGRAPHY – Photographe sportif & portraits (studio, extérieur, boudoir) à Montlaur (Toulouse)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="description" content="Photographe sportif et portrait basé à Montlaur (31450), près de Toulouse. Hockey, football, équitation, sport mécanique, portrait studio, boudoir. Reportages sportifs, shootings individuels, séances en studio ou en extérieur sur mesure." />
-  <meta name="keywords" content="photographe sportif toulouse, photographe hockey toulouse, photographe équitation toulouse, photographe foot toulouse, photographe montlaur, photographe 31450, portrait studio toulouse, photographe boudoir toulouse, seb.p photography" />
-  <meta name="author" content="SEB.P PHOTOGRAPHY" />
+  <!-- SEO de base -->
+  <meta name="description" content="Photographe sportif et portrait à Montlaur, près de Toulouse. Hockey, football, équitation, sport mécanique, portrait studio, portrait extérieur et séances boudoir élégantes et respectueuses." />
+  <meta name="keywords" content="SEB.P PHOTOGRAPHY, photographe sportif, photographe hockey, photographe football, photographe équitation, photographe sport mécanique, portrait studio, portrait extérieur, photographe boudoir, shooting boudoir, photographe Montlaur, photographe Toulouse" />
+  <meta name="author" content="Sébastien Pequignot – SEB.P PHOTOGRAPHY" />
+  <link rel="canonical" href="https://sebpphoto.fr/" />
+  <meta name="theme-color" content="#020617" />
 
-  <!-- Open Graph pour les partages -->
-  <meta property="og:title" content="SEB.P PHOTOGRAPHY – Photographe sportif & portrait à Toulouse" />
-  <meta property="og:description" content="Hockey, foot, équitation, sport mécanique, portrait studio et boudoir. Des images dynamiques et authentiques réalisées à Montlaur, près de Toulouse." />
+  <!-- SEO local / géolocalisation -->
+  <meta name="geo.region" content="FR-31" />
+  <meta name="geo.placename" content="Montlaur" />
+  <meta name="geo.position" content="43.4889;1.6000" />
+  <meta name="ICBM" content="43.4889, 1.6000" />
+
+  <!-- Open Graph / partage réseaux sociaux -->
+  <meta property="og:title" content="SEB.P PHOTOGRAPHY – Photographe sportif & portraits (studio, extérieur, boudoir) à Montlaur (Toulouse)" />
+  <meta property="og:description" content="Photographe sportif et portrait à Montlaur (31450), près de Toulouse : hockey, football, équitation, sport mécanique, portraits studio, portraits en extérieur et séances boudoir élégantes." />
   <meta property="og:url" content="https://sebpphoto.fr/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://sebpphoto.fr/images/hockey-1.jpg" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- Twitter card (au cas où) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SEB.P PHOTOGRAPHY – Photographe sportif & portraits à Montlaur (Toulouse)" />
+  <meta name="twitter:description" content="Hockey, football, équitation, sport mécanique, portraits studio, portraits en extérieur et séances boudoir élégantes près de Toulouse." />
+  <meta name="twitter:image" content="https://sebpphoto.fr/images/hockey-1.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -628,26 +644,25 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 42px;
-      height: 42px;
+      width: 40px;
+      height: 40px;
       border-radius: 999px;
       border: 1px solid var(--accent);
-      background: rgba(15, 23, 42, 0.95);
+      background: rgba(15, 23, 42, 0.9);
       color: var(--accent);
       display: inline-flex;
       align-items: center;
       justify-content: center;
       font-size: 1.6rem;
       cursor: pointer;
-      transition: background 0.15s ease-out, transform 0.1s ease-out, color 0.1s ease-out, box-shadow 0.15s ease-out;
-      z-index: 1;
+      transition: background 0.15s ease-out, transform 0.1s ease-out, color 0.15s ease-out;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
     }
 
     .lightbox-arrow:hover {
       background: var(--accent);
-      color: #020617;
-      box-shadow: 0 0 18px rgba(234, 179, 8, 0.7);
-      transform: translateY(-50%) scale(1.06);
+      color: #0b1120;
+      transform: translateY(-50%) scale(1.05);
     }
 
     .lightbox-prev { left: 0.75rem; }
@@ -661,21 +676,21 @@
       height: 34px;
       border-radius: 999px;
       border: 1px solid var(--accent);
-      background: rgba(15, 23, 42, 0.95);
+      background: rgba(15, 23, 42, 0.9);
       color: var(--accent);
       font-size: 1.3rem;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      transition: background 0.15s ease-out, color 0.15s ease-out, box-shadow 0.15s ease-out;
-      z-index: 1;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+      transition: background 0.15s ease-out, color 0.15s ease-out, transform 0.1s ease-out;
     }
 
     .lightbox-close:hover {
       background: var(--accent);
-      color: #020617;
-      box-shadow: 0 0 18px rgba(234, 179, 8, 0.7);
+      color: #0b1120;
+      transform: scale(1.05);
     }
 
     @media (max-width: 640px) {
@@ -719,6 +734,52 @@
       }
     }
   </style>
+
+  <!-- Données structurées Schema.org pour Google (LocalBusiness + Photographer) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "additionalType": "https://schema.org/Photograph",
+    "name": "SEB.P PHOTOGRAPHY",
+    "image": "https://sebpphoto.fr/images/logo-photo.png",
+    "@id": "https://sebpphoto.fr#business",
+    "url": "https://sebpphoto.fr/",
+    "telephone": "+33634235557",
+    "priceRange": "€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Montlaur",
+      "addressLocality": "Montlaur",
+      "postalCode": "31450",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.4889,
+      "longitude": 1.6000
+    },
+    "sameAs": [
+      "https://www.instagram.com/seb.p.photo/",
+      "https://www.facebook.com/seb.p.photo/"
+    ],
+    "description": "Photographe sportif et portrait à Montlaur (Toulouse) : hockey sur glace, football, équitation, sport mécanique, portraits studio, portraits en extérieur et séances boudoir élégantes et respectueuses.",
+    "knowsAbout": [
+      "Photographie sportive",
+      "Hockey sur glace",
+      "Football",
+      "Équitation",
+      "Sport mécanique",
+      "Portrait studio",
+      "Portrait extérieur",
+      "Boudoir"
+    ],
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Toulouse et Lauragais"
+    }
+  }
+  </script>
 </head>
 <body>
 <div class="page-wrapper">
