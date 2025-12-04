@@ -26,7 +26,7 @@
   <meta property="og:image" content="https://sebpphoto.fr/images/hockey-1.jpg" />
   <meta property="og:locale" content="fr_FR" />
 
-  <!-- Twitter card (au cas où) -->
+  <!-- Twitter card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="SEB.P PHOTOGRAPHY – Photographe sportif & portraits à Montlaur (Toulouse)" />
   <meta name="twitter:description" content="Hockey, football, équitation, sport mécanique, portraits studio, portraits en extérieur et séances boudoir élégantes près de Toulouse." />
@@ -633,6 +633,8 @@
       transform: scale(0.98);
       transition: opacity 0.4s ease, transform 0.4s ease;
       background: #000;
+      position: relative;
+      z-index: 1;
     }
 
     .lightbox-inner img.visible {
@@ -657,6 +659,7 @@
       cursor: pointer;
       transition: background 0.15s ease-out, transform 0.1s ease-out, color 0.15s ease-out;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+      z-index: 2;
     }
 
     .lightbox-arrow:hover {
@@ -685,6 +688,7 @@
       justify-content: center;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
       transition: background 0.15s ease-out, color 0.15s ease-out, transform 0.1s ease-out;
+      z-index: 2;
     }
 
     .lightbox-close:hover {
@@ -735,7 +739,7 @@
     }
   </style>
 
-  <!-- Données structurées Schema.org pour Google (LocalBusiness + Photographer) -->
+  <!-- Données structurées Schema.org pour Google (LocalBusiness + Photographe) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
